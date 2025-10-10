@@ -1,0 +1,1242 @@
+,RIC,ISIN Code,TRBC Industry Group Name
+0,SOLB.BR,BE0003470755,Chemicals
+1,ACKB.BR,BE0003764785,Construction & Engineering
+2,ARGX.BR,NL0010832176,Biotechnology & Medical Research
+3,PROX.BR,BE0003810273,Telecommunications Services
+4,INGA.AS,NL0011821202,Banking Services
+5,ONTEX.BR,BE0974276082,Personal & Household Products & Services
+6,APAM.AS,LU0569974404,Metals & Mining
+7,TNET.BR^J23,BE0003826436,Telecommunications Services
+8,WDPP.BR,BE0974349814,Residential & Commercial REITs
+9,GBLB.BR,BE0003797140,Investment Holding Companies
+10,AGES.BR,BE0974264930,Insurance
+11,COFB.BR,BE0003593044,Residential & Commercial REITs
+12,GLPG.AS,BE0003818359,Biotechnology & Medical Research
+13,UMI.BR,BE0974320526,Chemicals
+14,ABI.BR,BE0974293251,Beverages
+15,COLR.BR,BE0974256852,Food & Drug Retailing
+16,SOF.BR,BE0003717312,Investment Holding Companies
+17,KBC.BR,BE0003565737,Banking Services
+18,UCB.BR,BE0003739530,Pharmaceuticals
+19,BAR.BR,BE0974362940,Electronic Equipment & Parts
+20,AOO.BR,BE0003851681,Residential & Commercial REITs
+21,ELI.BR,BE0003822393,Electric Utilities & IPPs
+22,MLXS.BR,BE0165385973,Semiconductors & Semiconductor Equipment
+23,IETB.BR,BE0974259880,Specialty Retailers
+24,VGP1.BR,BE0003878957,Real Estate Operations
+25,SYENS.BR,BE0974464977,Chemicals
+26,SOLB.BR,BE0003470755,Chemicals
+27,ACKB.BR,BE0003764785,Construction & Engineering
+28,SYENS.BR,BE0974464977,Chemicals
+29,ARGX.BR,NL0010832176,Biotechnology & Medical Research
+30,ELI.BR,BE0003822393,Electric Utilities & IPPs
+31,WDPP.BR,BE0974349814,Residential & Commercial REITs
+32,AOO.BR,BE0003851681,Residential & Commercial REITs
+33,MLXS.BR,BE0165385973,Semiconductors & Semiconductor Equipment
+34,GBLB.BR,BE0003797140,Investment Holding Companies
+35,AGES.BR,BE0974264930,Insurance
+36,IETB.BR,BE0974259880,Specialty Retailers
+37,COFB.BR,BE0003593044,Residential & Commercial REITs
+38,GLPG.AS,BE0003818359,Biotechnology & Medical Research
+39,UMI.BR,BE0974320526,Chemicals
+40,AZE.BR,BE0974400328,Diversified Industrial Goods Wholesale
+41,LOTB.BR,BE0003604155,Food & Tobacco
+42,ABI.BR,BE0974293251,Beverages
+43,SOF.BR,BE0003717312,Investment Holding Companies
+44,KBC.BR,BE0003565737,Banking Services
+45,UCB.BR,BE0003739530,Pharmaceuticals
+46,GMAB.CO,DK0010272202,Biotechnology & Medical Research
+47,MAERSKb.CO,DK0010244508,Freight & Logistics Services
+48,SIM.CO^J23,DK0060495240,Financial Technology (Fintech) & Infrastructure
+49,VWS.CO,DK0061539921,Renewable Energy
+50,NSISb.CO,DK0060336014,Chemicals
+51,RBREW.CO,DK0060634707,Beverages
+52,NOVOb.CO,DK0062498333,Pharmaceuticals
+53,ORSTED.CO,DK0060094928,Electric Utilities & IPPs
+54,DANSKE.CO,DK0010274414,Banking Services
+55,CHRH.CO^A24,DK0060227585,Food & Tobacco
+56,GN.CO,DK0010272632,"Computers, Phones & Household Electronics"
+57,DEMANT.CO,DK0060738599,Healthcare Equipment & Supplies
+58,AMBUb.CO,DK0060946788,Healthcare Equipment & Supplies
+59,ISS.CO,DK0060542181,Professional & Commercial Services
+60,TRYG.CO,DK0060636678,Insurance
+61,LUN.CO^F22,DK0010287234,Pharmaceuticals
+62,DSV.CO,DK0060079531,Freight & Logistics Services
+63,CARLb.CO,DK0010181759,Beverages
+64,PNDORA.CO,DK0060252690,Textiles & Apparel
+65,COLOb.CO,DK0060448595,Healthcare Equipment & Supplies
+66,ROCKb.CO,DK0063855168,Construction Materials
+67,MAERSKa.CO,DK0010244425,Freight & Logistics Services
+68,NETCG.CO,DK0060952919,Software & IT Services
+69,BAVA.CO,DK0015998017,Pharmaceuticals
+70,JYSK.CO,DK0010307958,Banking Services
+71,MAERSKa.CO,DK0010244425,Freight & Logistics Services
+72,GMAB.CO,DK0010272202,Biotechnology & Medical Research
+73,MAERSKb.CO,DK0010244508,Freight & Logistics Services
+74,VWS.CO,DK0061539921,Renewable Energy
+75,NSISb.CO,DK0060336014,Chemicals
+76,JYSK.CO,DK0010307958,Banking Services
+77,NOVOb.CO,DK0062498333,Pharmaceuticals
+78,ORSTED.CO,DK0060094928,Electric Utilities & IPPs
+79,DANSKE.CO,DK0010274414,Banking Services
+80,CHRH.CO^A24,DK0060227585,Food & Tobacco
+81,GN.CO,DK0010272632,"Computers, Phones & Household Electronics"
+82,DEMANT.CO,DK0060738599,Healthcare Equipment & Supplies
+83,AMBUb.CO,DK0060946788,Healthcare Equipment & Supplies
+84,ISS.CO,DK0060542181,Professional & Commercial Services
+85,ROCKb.CO,DK0063855168,Construction Materials
+86,TRYG.CO,DK0060636678,Insurance
+87,DSV.CO,DK0060079531,Freight & Logistics Services
+88,CARLb.CO,DK0010181759,Beverages
+89,PNDORA.CO,DK0060252690,Textiles & Apparel
+90,COLOb.CO,DK0060448595,Healthcare Equipment & Supplies
+91,NKT.CO,DK0010287663,"Machinery, Tools, Heavy Vehicles, Trains & Ships"
+92,ZELA.CO,DK0060257814,Biotechnology & Medical Research
+93,OUT1V.HE,FI0009002422,Metals & Mining
+94,TYRES.HE,FI0009005318,Automobiles & Auto Parts
+95,VALMT.HE,FI4000074984,"Machinery, Tools, Heavy Vehicles, Trains & Ships"
+96,METSB.HE,FI0009000665,Containers & Packaging
+97,KNEBV.HE,FI0009013403,"Machinery, Tools, Heavy Vehicles, Trains & Ships"
+98,HIAB.HE,FI4000571013,"Machinery, Tools, Heavy Vehicles, Trains & Ships"
+99,TELIA1.HE,SE0000667925,Telecommunications Services
+100,KEMIRA.HE,FI0009004824,Chemicals
+101,ORNBV.HE,FI0009014377,Pharmaceuticals
+102,NESTE.HE,FI0009013296,Oil & Gas
+103,METSO.HE,FI0009014575,"Machinery, Tools, Heavy Vehicles, Trains & Ships"
+104,STERV.HE,FI0009005961,Containers & Packaging
+105,SAMPO.HE,FI4000552500,Insurance
+106,NOKIA.HE,FI0009000681,Communications & Networking
+107,FORTUM.HE,FI0009007132,Electric Utilities & IPPs
+108,WRT1V.HE,FI0009003727,"Machinery, Tools, Heavy Vehicles, Trains & Ships"
+109,NELES.HE^D22,FI4000440664,"Machinery, Tools, Heavy Vehicles, Trains & Ships"
+110,NDAFI.HE,FI4000297767,Banking Services
+111,ELISA.HE,FI0009007884,Telecommunications Services
+112,UPM.HE,FI0009005987,Paper & Forest Products
+113,TIETO.HE,FI0009000277,Software & IT Services
+114,KCRA.HE,FI0009005870,"Machinery, Tools, Heavy Vehicles, Trains & Ships"
+115,HUH1V.HE,FI0009000459,Containers & Packaging
+116,KESKOB.HE,FI0009000202,Food & Drug Retailing
+117,KOJAMO.HE,FI4000312251,Real Estate Operations
+118,METSO.HE,FI0009014575,"Machinery, Tools, Heavy Vehicles, Trains & Ships"
+119,QTCOM.HE,FI4000198031,Software & IT Services
+120,STERV.HE,FI0009005961,Containers & Packaging
+121,SAMPO.HE,FI4000552500,Insurance
+122,NOKIA.HE,FI0009000681,Communications & Networking
+123,FORTUM.HE,FI0009007132,Electric Utilities & IPPs
+124,WRT1V.HE,FI0009003727,"Machinery, Tools, Heavy Vehicles, Trains & Ships"
+125,NDAFI.HE,FI4000297767,Banking Services
+126,ELISA.HE,FI0009007884,Telecommunications Services
+127,UPM.HE,FI0009005987,Paper & Forest Products
+128,TIETO.HE,FI0009000277,Software & IT Services
+129,KCRA.HE,FI0009005870,"Machinery, Tools, Heavy Vehicles, Trains & Ships"
+130,HUH1V.HE,FI0009000459,Containers & Packaging
+131,KESKOB.HE,FI0009000202,Food & Drug Retailing
+132,OUT1V.HE,FI0009002422,Metals & Mining
+133,TYRES.HE,FI0009005318,Automobiles & Auto Parts
+134,TOKMAN.HE,FI4000197934,Diversified Retail
+135,VALMT.HE,FI4000074984,"Machinery, Tools, Heavy Vehicles, Trains & Ships"
+136,KNEBV.HE,FI0009013403,"Machinery, Tools, Heavy Vehicles, Trains & Ships"
+137,HIAB.HE,FI4000571013,"Machinery, Tools, Heavy Vehicles, Trains & Ships"
+138,TELIA1.HE,SE0000667925,Telecommunications Services
+139,KOJAMO.HE,FI4000312251,Real Estate Operations
+140,ORNBV.HE,FI0009014377,Pharmaceuticals
+141,NESTE.HE,FI0009013296,Oil & Gas
+142,SSABBH.HE,SE0000120669,Metals & Mining
+143,METSB.HE,FI0009000665,Containers & Packaging
+144,MANTA.HE,FI4000552526,Insurance
+145,KEMIRA.HE,FI0009004824,Chemicals
+146,TRIA.PA,FR0005691656,Leisure Products
+147,CVO.PA,FR0000064578,Residential & Commercial REITs
+148,RXL.PA,FR0010451203,"Machinery, Tools, Heavy Vehicles, Trains & Ships"
+149,EMEIS.PA,FR001400NLM4,Healthcare Providers & Services
+150,SEVI.PA^B22,FR0010613471,Professional & Commercial Services
+151,SGEF.PA,FR0000125486,Construction & Engineering
+152,INGC.PA^K20,FR0000125346,Professional & Commercial Services
+153,NEXS.PA,FR0000044448,"Machinery, Tools, Heavy Vehicles, Trains & Ships"
+154,APAM.AS,LU0569974404,Metals & Mining
+155,LTEN.PA,FR0000071946,Software & IT Services
+156,VIV.PA,FR0000127771,Media & Publishing
+157,IPN.PA,FR0010259150,Pharmaceuticals
+158,SOIT.PA,FR0013227113,Semiconductors & Semiconductor Equipment
+159,STDM.PA,FR0013154002,Healthcare Equipment & Supplies
+160,BOLL.PA,FR0000039299,Media & Publishing
+161,EDEN.PA,FR0010908533,Professional & Commercial Services
+162,BNPP.PA,FR0000131104,Banking Services
+163,HRMS.PA,FR0000052292,Textiles & Apparel
+164,COFA.PA,FR0010667147,Insurance
+165,DANO.PA,FR0000120644,Food & Tobacco
+166,URW.PA,FR0013326246,Residential & Commercial REITs
+167,TKTT.PA,FR0004188670,Homebuilding & Construction Supplies
+168,PRTP.PA,FR0000121485,Specialty Retailers
+169,QDT.PA,FR0000120560,Software & IT Services
+170,AYV.PA,FR0013258662,Freight & Logistics Services
+171,BICP.PA,FR0000120966,Professional & Commercial Services
+172,ATOS.PA,FR001400X2S4,Software & IT Services
+173,ELIOR.PA,FR0011950732,Hotels & Entertainment Services
+174,FNAC.PA,FR0011476928,Specialty Retailers
+175,MICP.PA,FR001400AJ45,Automobiles & Auto Parts
+176,SAF.PA,FR0000073272,Aerospace & Defense
+177,RCOP.PA,FR0000130395,Beverages
+178,DAST.PA,FR0014003TT8,Software & IT Services
+179,ACCP.PA,FR0000120404,Hotels & Entertainment Services
+180,MWDP.PA,FR0000121204,Investment Holding Companies
+181,ORAN.PA,FR0000133308,Telecommunications Services
+182,EUFI.PA,FR0014000MR3,Biotechnology & Medical Research
+183,EXHO.PA,FR0000121220,Hotels & Entertainment Services
+184,ENX.PA,NL0006294274,Investment Banking & Investment Services
+185,BVI.PA,FR0006174348,Professional & Commercial Services
+186,AIRF.PA,FR001400J770,Passenger Transportation Services
+187,AIRP.PA,FR0000120073,Chemicals
+188,SASY.PA,FR0000120578,Pharmaceuticals
+189,TFFP.PA,FR0000054900,Media & Publishing
+190,ESLX.PA,FR0000121667,Healthcare Equipment & Supplies
+191,AM.PA,FR0014004L86,Aerospace & Defense
+192,AMUN.PA,FR0004125920,Investment Banking & Investment Services
+193,AIR.PA,NL0000235190,Aerospace & Defense
+194,AXAF.PA,FR0000120628,Insurance
+195,GFCP.PA,FR0010040865,Residential & Commercial REITs
+196,ALTT.PA^D20,FR0000034639,Professional & Commercial Services
+197,MT.AS,LU1598757687,Metals & Mining
+198,ENGIE.PA,FR0010208488,Multiline Utilities
+199,BOUY.PA,FR0000120503,Construction & Engineering
+200,VLLP.PA,FR0013506730,Oil & Gas Related Equipment and Services
+201,UBIP.PA,FR0000054470,Software & IT Services
+202,EDF.PA^F23,FR0010242511,Multiline Utilities
+203,SEBF.PA,FR0000121709,Household Goods
+204,MERY.PA,FR0010241638,Residential & Commercial REITs
+205,CASP.PA,FR001400OKR3,Food & Drug Retailing
+206,SPIE.PA,FR0012757854,Construction & Engineering
+207,PEUP.PA^A21,FR0000121501,Automobiles & Auto Parts
+208,GTT.PA,FR0011726835,Oil & Gas Related Equipment and Services
+209,FOUG.PA,FR0000130452,Construction & Engineering
+210,VLOF.PA,FR0013176526,Automobiles & Auto Parts
+211,ICAD.PA,FR0000035081,Residential & Commercial REITs
+212,SESFd.PA,LU0088087324,Telecommunications Services
+213,ERMT.PA,FR0000131757,Metals & Mining
+214,MMTP.PA,FR0000053225,Media & Publishing
+215,LVMH.PA,FR0000121014,Textiles & Apparel
+216,GNFT.PA,FR0004163111,Biotechnology & Medical Research
+217,SCHN.PA,FR0000121972,"Machinery, Tools, Heavy Vehicles, Trains & Ships"
+218,ISOS.PA,FR0000073298,Media & Publishing
+219,CAGR.PA,FR0000045072,Banking Services
+220,SOGN.PA,FR0000130809,Banking Services
+221,BIOX.PA,FR0013280286,Healthcare Equipment & Supplies
+222,NEXI.PA,FR0010112524,Real Estate Operations
+223,LEGD.PA,FR0010307819,"Machinery, Tools, Heavy Vehicles, Trains & Ships"
+224,DBV.PA,FR0010417345,Pharmaceuticals
+225,SGOB.PA,FR0000125007,Homebuilding & Construction Supplies
+226,ELIS.PA,FR0012435121,Professional & Commercial Services
+227,FRVIA.PA,FR0000121147,Automobiles & Auto Parts
+228,IMTP.PA,FR0000120859,Metals & Mining
+229,SOPR.PA,FR0000050809,Software & IT Services
+230,SOLB.BR,BE0003470755,Chemicals
+231,CARR.PA,FR0000120172,Food & Drug Retailing
+232,CNAT.PA^G21,FR0000120685,Investment Banking & Investment Services
+233,ILD.PA^J21,FR0004035913,Telecommunications Services
+234,TTEF.PA,FR0000120271,Oil & Gas
+235,GETP.PA,FR0010533075,Transport Infrastructure
+236,RUBF.PA,FR0013269123,Oil & Gas
+237,JCDX.PA,FR0000077919,Media & Publishing
+238,ETL.PA,FR0010221234,Telecommunications Services
+239,RENA.PA,FR0000131906,Automobiles & Auto Parts
+240,PUBP.PA,FR0000130577,Media & Publishing
+241,CLARI.PA,FR0010386334,Healthcare Providers & Services
+242,MDM.PA,FR0013153541,Specialty Retailers
+243,LOIM.PA,FR0000121964,Residential & Commercial REITs
+244,ADP.PA,FR0010340141,Transport Infrastructure
+245,SCOR.PA,FR0010411983,Insurance
+246,VCTP.PA,FR0000031775,Construction Materials
+247,CNPP.PA^F22,FR0000120222,Insurance
+248,VIRB.PA,FR0000031577,Pharmaceuticals
+249,TEPRF.PA,FR0000051807,Professional & Commercial Services
+250,VIE.PA,FR0000124141,Multiline Utilities
+251,VRLA.PA,FR0013447729,Containers & Packaging
+252,OREP.PA,FR0000120321,Personal & Household Products & Services
+253,ALSO.PA,FR0010220475,"Machinery, Tools, Heavy Vehicles, Trains & Ships"
+254,PERP.PA,FR0000120693,Beverages
+255,OPM.PA,FR0000124570,Automobiles & Auto Parts
+256,LAGA.PA,FR0000130213,Media & Publishing
+257,EURA.PA,FR0000121121,Investment Banking & Investment Services
+258,STMPA.PA,NL0000226223,Semiconductors & Semiconductor Equipment
+259,WLN.PA,FR0011981968,Financial Technology (Fintech) & Infrastructure
+260,TCFP.PA,FR0000121329,Aerospace & Defense
+261,FTI.PA^B22,GB00BDSFG982,Oil & Gas Related Equipment and Services
+262,VIRI.PA,FR001400PVN6,Oil & Gas Related Equipment and Services
+263,EUCAR.PA^G22,FR0012789949,Passenger Transportation Services
+264,AKE.PA,FR0010313833,Chemicals
+265,CAPP.PA,FR0000125338,Software & IT Services
+266,TRIA.PA,FR0005691656,Leisure Products
+267,CVO.PA,FR0000064578,Residential & Commercial REITs
+268,RXL.PA,FR0010451203,"Machinery, Tools, Heavy Vehicles, Trains & Ships"
+269,EMEIS.PA,FR001400NLM4,Healthcare Providers & Services
+270,SEVI.PA^B22,FR0010613471,Professional & Commercial Services
+271,SGEF.PA,FR0000125486,Construction & Engineering
+272,NEXS.PA,FR0000044448,"Machinery, Tools, Heavy Vehicles, Trains & Ships"
+273,APAM.AS,LU0569974404,Metals & Mining
+274,LTEN.PA,FR0000071946,Software & IT Services
+275,VIV.PA,FR0000127771,Media & Publishing
+276,IPN.PA,FR0010259150,Pharmaceuticals
+277,SOIT.PA,FR0013227113,Semiconductors & Semiconductor Equipment
+278,STDM.PA,FR0013154002,Healthcare Equipment & Supplies
+279,BOLL.PA,FR0000039299,Media & Publishing
+280,EDEN.PA,FR0010908533,Professional & Commercial Services
+281,ROBF.PA,FR0000039091,Chemicals
+282,BNPP.PA,FR0000131104,Banking Services
+283,HRMS.PA,FR0000052292,Textiles & Apparel
+284,COFA.PA,FR0010667147,Insurance
+285,DANO.PA,FR0000120644,Food & Tobacco
+286,URW.PA,FR0013326246,Residential & Commercial REITs
+287,PRTP.PA,FR0000121485,Specialty Retailers
+288,AYV.PA,FR0013258662,Freight & Logistics Services
+289,BICP.PA,FR0000120966,Professional & Commercial Services
+290,ATOS.PA,FR001400X2S4,Software & IT Services
+291,ABIO.PA^J22,FR0000060402,Electric Utilities & IPPs
+292,ELIOR.PA,FR0011950732,Hotels & Entertainment Services
+293,ALMCP.PA,FR0011742329,"Machinery, Tools, Heavy Vehicles, Trains & Ships"
+294,FNAC.PA,FR0011476928,Specialty Retailers
+295,MICP.PA,FR001400AJ45,Automobiles & Auto Parts
+296,SAF.PA,FR0000073272,Aerospace & Defense
+297,RCOP.PA,FR0000130395,Beverages
+298,DAST.PA,FR0014003TT8,Software & IT Services
+299,ACCP.PA,FR0000120404,Hotels & Entertainment Services
+300,MWDP.PA,FR0000121204,Investment Holding Companies
+301,ORAN.PA,FR0000133308,Telecommunications Services
+302,EUFI.PA,FR0014000MR3,Biotechnology & Medical Research
+303,EXHO.PA,FR0000121220,Hotels & Entertainment Services
+304,ENX.PA,NL0006294274,Investment Banking & Investment Services
+305,BVI.PA,FR0006174348,Professional & Commercial Services
+306,AIRF.PA,FR001400J770,Passenger Transportation Services
+307,AIRP.PA,FR0000120073,Chemicals
+308,SASY.PA,FR0000120578,Pharmaceuticals
+309,TFFP.PA,FR0000054900,Media & Publishing
+310,CARM.PA,FR0010828137,Residential & Commercial REITs
+311,ESLX.PA,FR0000121667,Healthcare Equipment & Supplies
+312,AM.PA,FR0014004L86,Aerospace & Defense
+313,AMUN.PA,FR0004125920,Investment Banking & Investment Services
+314,AIR.PA,NL0000235190,Aerospace & Defense
+315,AXAF.PA,FR0000120628,Insurance
+316,GFCP.PA,FR0010040865,Residential & Commercial REITs
+317,MT.AS,LU1598757687,Metals & Mining
+318,ENGIE.PA,FR0010208488,Multiline Utilities
+319,BOUY.PA,FR0000120503,Construction & Engineering
+320,VLLP.PA,FR0013506730,Oil & Gas Related Equipment and Services
+321,UBIP.PA,FR0000054470,Software & IT Services
+322,EDF.PA^F23,FR0010242511,Multiline Utilities
+323,SEBF.PA,FR0000121709,Household Goods
+324,MERY.PA,FR0010241638,Residential & Commercial REITs
+325,CASP.PA,FR001400OKR3,Food & Drug Retailing
+326,SPIE.PA,FR0012757854,Construction & Engineering
+327,PEUP.PA^A21,FR0000121501,Automobiles & Auto Parts
+328,GTT.PA,FR0011726835,Oil & Gas Related Equipment and Services
+329,FOUG.PA,FR0000130452,Construction & Engineering
+330,VLOF.PA,FR0013176526,Automobiles & Auto Parts
+331,ICAD.PA,FR0000035081,Residential & Commercial REITs
+332,SESFd.PA,LU0088087324,Telecommunications Services
+333,ERMT.PA,FR0000131757,Metals & Mining
+334,MMTP.PA,FR0000053225,Media & Publishing
+335,LVMH.PA,FR0000121014,Textiles & Apparel
+336,SCHN.PA,FR0000121972,"Machinery, Tools, Heavy Vehicles, Trains & Ships"
+337,ISOS.PA,FR0000073298,Media & Publishing
+338,CAGR.PA,FR0000045072,Banking Services
+339,SOGN.PA,FR0000130809,Banking Services
+340,BIOX.PA,FR0013280286,Healthcare Equipment & Supplies
+341,NEXI.PA,FR0010112524,Real Estate Operations
+342,LEGD.PA,FR0010307819,"Machinery, Tools, Heavy Vehicles, Trains & Ships"
+343,SGOB.PA,FR0000125007,Homebuilding & Construction Supplies
+344,ELIS.PA,FR0012435121,Professional & Commercial Services
+345,FRVIA.PA,FR0000121147,Automobiles & Auto Parts
+346,IMTP.PA,FR0000120859,Metals & Mining
+347,SOPR.PA,FR0000050809,Software & IT Services
+348,S30.PA,FR0013379484,Software & IT Services
+349,SOLB.BR,BE0003470755,Chemicals
+350,CARR.PA,FR0000120172,Food & Drug Retailing
+351,CNAT.PA^G21,FR0000120685,Investment Banking & Investment Services
+352,ILD.PA^J21,FR0004035913,Telecommunications Services
+353,TTEF.PA,FR0000120271,Oil & Gas
+354,GETP.PA,FR0010533075,Transport Infrastructure
+355,RUBF.PA,FR0013269123,Oil & Gas
+356,JCDX.PA,FR0000077919,Media & Publishing
+357,ETL.PA,FR0010221234,Telecommunications Services
+358,RENA.PA,FR0000131906,Automobiles & Auto Parts
+359,PUBP.PA,FR0000130577,Media & Publishing
+360,CLARI.PA,FR0010386334,Healthcare Providers & Services
+361,MDM.PA,FR0013153541,Specialty Retailers
+362,LOIM.PA,FR0000121964,Residential & Commercial REITs
+363,ADP.PA,FR0010340141,Transport Infrastructure
+364,SCOR.PA,FR0010411983,Insurance
+365,CNPP.PA^F22,FR0000120222,Insurance
+366,VIRB.PA,FR0000031577,Pharmaceuticals
+367,TEPRF.PA,FR0000051807,Professional & Commercial Services
+368,KOF.PA,FR0004007813,Homebuilding & Construction Supplies
+369,VIE.PA,FR0000124141,Multiline Utilities
+370,VRLA.PA,FR0013447729,Containers & Packaging
+371,OREP.PA,FR0000120321,Personal & Household Products & Services
+372,FDJU.PA,FR0013451333,Hotels & Entertainment Services
+373,NEOEN.PA^D25,FR0011675362,Electric Utilities & IPPs
+374,ALSO.PA,FR0010220475,"Machinery, Tools, Heavy Vehicles, Trains & Ships"
+375,PERP.PA,FR0000120693,Beverages
+376,OPM.PA,FR0000124570,Automobiles & Auto Parts
+377,LAGA.PA,FR0000130213,Media & Publishing
+378,EURA.PA,FR0000121121,Investment Banking & Investment Services
+379,STMPA.PA,NL0000226223,Semiconductors & Semiconductor Equipment
+380,WLN.PA,FR0011981968,Financial Technology (Fintech) & Infrastructure
+381,TCFP.PA,FR0000121329,Aerospace & Defense
+382,FTI.PA^B22,GB00BDSFG982,Oil & Gas Related Equipment and Services
+383,VIRI.PA,FR001400PVN6,Oil & Gas Related Equipment and Services
+384,AKE.PA,FR0010313833,Chemicals
+385,CAPP.PA,FR0000125338,Software & IT Services
+386,TRIA.PA,FR0005691656,Leisure Products
+387,CVO.PA,FR0000064578,Residential & Commercial REITs
+388,RXL.PA,FR0010451203,"Machinery, Tools, Heavy Vehicles, Trains & Ships"
+389,EMEIS.PA,FR001400NLM4,Healthcare Providers & Services
+390,SEVI.PA^B22,FR0010613471,Professional & Commercial Services
+391,SGEF.PA,FR0000125486,Construction & Engineering
+392,NEXS.PA,FR0000044448,"Machinery, Tools, Heavy Vehicles, Trains & Ships"
+393,APAM.AS,LU0569974404,Metals & Mining
+394,LTEN.PA,FR0000071946,Software & IT Services
+395,VIV.PA,FR0000127771,Media & Publishing
+396,IPN.PA,FR0010259150,Pharmaceuticals
+397,SOIT.PA,FR0013227113,Semiconductors & Semiconductor Equipment
+398,STLAM.PA,NL00150001Q9,Automobiles & Auto Parts
+399,STDM.PA,FR0013154002,Healthcare Equipment & Supplies
+400,BOLL.PA,FR0000039299,Media & Publishing
+401,EDEN.PA,FR0010908533,Professional & Commercial Services
+402,BNPP.PA,FR0000131104,Banking Services
+403,HRMS.PA,FR0000052292,Textiles & Apparel
+404,COFA.PA,FR0010667147,Insurance
+405,DANO.PA,FR0000120644,Food & Tobacco
+406,URW.PA,FR0013326246,Residential & Commercial REITs
+407,VLS.PA,FR0004056851,Biotechnology & Medical Research
+408,PRTP.PA,FR0000121485,Specialty Retailers
+409,AYV.PA,FR0013258662,Freight & Logistics Services
+410,BICP.PA,FR0000120966,Professional & Commercial Services
+411,ATOS.PA,FR001400X2S4,Software & IT Services
+412,ABIO.PA^J22,FR0000060402,Electric Utilities & IPPs
+413,ELIOR.PA,FR0011950732,Hotels & Entertainment Services
+414,ALMCP.PA,FR0011742329,"Machinery, Tools, Heavy Vehicles, Trains & Ships"
+415,FNAC.PA,FR0011476928,Specialty Retailers
+416,MICP.PA,FR001400AJ45,Automobiles & Auto Parts
+417,SAF.PA,FR0000073272,Aerospace & Defense
+418,RCOP.PA,FR0000130395,Beverages
+419,DAST.PA,FR0014003TT8,Software & IT Services
+420,ACCP.PA,FR0000120404,Hotels & Entertainment Services
+421,OVH.PA,FR0014005HJ9,Software & IT Services
+422,MWDP.PA,FR0000121204,Investment Holding Companies
+423,ORAN.PA,FR0000133308,Telecommunications Services
+424,EUFI.PA,FR0014000MR3,Biotechnology & Medical Research
+425,EXHO.PA,FR0000121220,Hotels & Entertainment Services
+426,ENX.PA,NL0006294274,Investment Banking & Investment Services
+427,BVI.PA,FR0006174348,Professional & Commercial Services
+428,AIRF.PA,FR001400J770,Passenger Transportation Services
+429,AIRP.PA,FR0000120073,Chemicals
+430,SASY.PA,FR0000120578,Pharmaceuticals
+431,TFFP.PA,FR0000054900,Media & Publishing
+432,ESLX.PA,FR0000121667,Healthcare Equipment & Supplies
+433,AM.PA,FR0014004L86,Aerospace & Defense
+434,AMUN.PA,FR0004125920,Investment Banking & Investment Services
+435,AIR.PA,NL0000235190,Aerospace & Defense
+436,AXAF.PA,FR0000120628,Insurance
+437,GFCP.PA,FR0010040865,Residential & Commercial REITs
+438,MT.AS,LU1598757687,Metals & Mining
+439,ENGIE.PA,FR0010208488,Multiline Utilities
+440,DBG.PA,FR0000053381,Professional & Commercial Services
+441,BOUY.PA,FR0000120503,Construction & Engineering
+442,VLLP.PA,FR0013506730,Oil & Gas Related Equipment and Services
+443,UBIP.PA,FR0000054470,Software & IT Services
+444,EDF.PA^F23,FR0010242511,Multiline Utilities
+445,SEBF.PA,FR0000121709,Household Goods
+446,MERY.PA,FR0010241638,Residential & Commercial REITs
+447,CASP.PA,FR001400OKR3,Food & Drug Retailing
+448,SPIE.PA,FR0012757854,Construction & Engineering
+449,GTT.PA,FR0011726835,Oil & Gas Related Equipment and Services
+450,FOUG.PA,FR0000130452,Construction & Engineering
+451,VLOF.PA,FR0013176526,Automobiles & Auto Parts
+452,ICAD.PA,FR0000035081,Residential & Commercial REITs
+453,SESFd.PA,LU0088087324,Telecommunications Services
+454,ERMT.PA,FR0000131757,Metals & Mining
+455,MMTP.PA,FR0000053225,Media & Publishing
+456,LVMH.PA,FR0000121014,Textiles & Apparel
+457,SCHN.PA,FR0000121972,"Machinery, Tools, Heavy Vehicles, Trains & Ships"
+458,ISOS.PA,FR0000073298,Media & Publishing
+459,CAGR.PA,FR0000045072,Banking Services
+460,SOGN.PA,FR0000130809,Banking Services
+461,BIOX.PA,FR0013280286,Healthcare Equipment & Supplies
+462,NEXI.PA,FR0010112524,Real Estate Operations
+463,LEGD.PA,FR0010307819,"Machinery, Tools, Heavy Vehicles, Trains & Ships"
+464,SGOB.PA,FR0000125007,Homebuilding & Construction Supplies
+465,ELIS.PA,FR0012435121,Professional & Commercial Services
+466,FRVIA.PA,FR0000121147,Automobiles & Auto Parts
+467,IMTP.PA,FR0000120859,Metals & Mining
+468,SOPR.PA,FR0000050809,Software & IT Services
+469,S30.PA,FR0013379484,Software & IT Services
+470,SOLB.BR,BE0003470755,Chemicals
+471,CARR.PA,FR0000120172,Food & Drug Retailing
+472,TTEF.PA,FR0000120271,Oil & Gas
+473,GETP.PA,FR0010533075,Transport Infrastructure
+474,RUBF.PA,FR0013269123,Oil & Gas
+475,JCDX.PA,FR0000077919,Media & Publishing
+476,ETL.PA,FR0010221234,Telecommunications Services
+477,RENA.PA,FR0000131906,Automobiles & Auto Parts
+478,PUBP.PA,FR0000130577,Media & Publishing
+479,CLARI.PA,FR0010386334,Healthcare Providers & Services
+480,MDM.PA,FR0013153541,Specialty Retailers
+481,LOIM.PA,FR0000121964,Residential & Commercial REITs
+482,ADP.PA,FR0010340141,Transport Infrastructure
+483,TE.PA,NL0014559478,Oil & Gas Related Equipment and Services
+484,SCOR.PA,FR0010411983,Insurance
+485,CNPP.PA^F22,FR0000120222,Insurance
+486,VIRB.PA,FR0000031577,Pharmaceuticals
+487,TEPRF.PA,FR0000051807,Professional & Commercial Services
+488,VIE.PA,FR0000124141,Multiline Utilities
+489,VRLA.PA,FR0013447729,Containers & Packaging
+490,OREP.PA,FR0000120321,Personal & Household Products & Services
+491,FDJU.PA,FR0013451333,Hotels & Entertainment Services
+492,NEOEN.PA^D25,FR0011675362,Electric Utilities & IPPs
+493,ALSO.PA,FR0010220475,"Machinery, Tools, Heavy Vehicles, Trains & Ships"
+494,PERP.PA,FR0000120693,Beverages
+495,OPM.PA,FR0000124570,Automobiles & Auto Parts
+496,LAGA.PA,FR0000130213,Media & Publishing
+497,EURA.PA,FR0000121121,Investment Banking & Investment Services
+498,STMPA.PA,NL0000226223,Semiconductors & Semiconductor Equipment
+499,WLN.PA,FR0011981968,Financial Technology (Fintech) & Infrastructure
+500,TCFP.PA,FR0000121329,Aerospace & Defense
+501,FTI.PA^B22,GB00BDSFG982,Oil & Gas Related Equipment and Services
+502,VIRI.PA,FR001400PVN6,Oil & Gas Related Equipment and Services
+503,EUCAR.PA^G22,FR0012789949,Passenger Transportation Services
+504,AKE.PA,FR0010313833,Chemicals
+505,CAPP.PA,FR0000125338,Software & IT Services
+506,TRIA.PA,FR0005691656,Leisure Products
+507,CVO.PA,FR0000064578,Residential & Commercial REITs
+508,RXL.PA,FR0010451203,"Machinery, Tools, Heavy Vehicles, Trains & Ships"
+509,EMEIS.PA,FR001400NLM4,Healthcare Providers & Services
+510,SGEF.PA,FR0000125486,Construction & Engineering
+511,NEXS.PA,FR0000044448,"Machinery, Tools, Heavy Vehicles, Trains & Ships"
+512,APAM.AS,LU0569974404,Metals & Mining
+513,LTEN.PA,FR0000071946,Software & IT Services
+514,VIV.PA,FR0000127771,Media & Publishing
+515,IPN.PA,FR0010259150,Pharmaceuticals
+516,SOIT.PA,FR0013227113,Semiconductors & Semiconductor Equipment
+517,STLAM.PA,NL00150001Q9,Automobiles & Auto Parts
+518,STDM.PA,FR0013154002,Healthcare Equipment & Supplies
+519,BOLL.PA,FR0000039299,Media & Publishing
+520,EDEN.PA,FR0010908533,Professional & Commercial Services
+521,BNPP.PA,FR0000131104,Banking Services
+522,IMAF.PA,FR0000033219,Residential & Commercial REITs
+523,HRMS.PA,FR0000052292,Textiles & Apparel
+524,COFA.PA,FR0010667147,Insurance
+525,DANO.PA,FR0000120644,Food & Tobacco
+526,URW.PA,FR0013326246,Residential & Commercial REITs
+527,VLS.PA,FR0004056851,Biotechnology & Medical Research
+528,PRTP.PA,FR0000121485,Specialty Retailers
+529,AYV.PA,FR0013258662,Freight & Logistics Services
+530,BICP.PA,FR0000120966,Professional & Commercial Services
+531,ATOS.PA,FR001400X2S4,Software & IT Services
+532,ELIOR.PA,FR0011950732,Hotels & Entertainment Services
+533,ALMCP.PA,FR0011742329,"Machinery, Tools, Heavy Vehicles, Trains & Ships"
+534,FNAC.PA,FR0011476928,Specialty Retailers
+535,MICP.PA,FR001400AJ45,Automobiles & Auto Parts
+536,SAF.PA,FR0000073272,Aerospace & Defense
+537,RCOP.PA,FR0000130395,Beverages
+538,DAST.PA,FR0014003TT8,Software & IT Services
+539,ACCP.PA,FR0000120404,Hotels & Entertainment Services
+540,ANTIN.PA,FR0014005AL0,Investment Banking & Investment Services
+541,OVH.PA,FR0014005HJ9,Software & IT Services
+542,MWDP.PA,FR0000121204,Investment Holding Companies
+543,ORAN.PA,FR0000133308,Telecommunications Services
+544,EUFI.PA,FR0014000MR3,Biotechnology & Medical Research
+545,EXHO.PA,FR0000121220,Hotels & Entertainment Services
+546,ENX.PA,NL0006294274,Investment Banking & Investment Services
+547,BVI.PA,FR0006174348,Professional & Commercial Services
+548,AIRF.PA,FR001400J770,Passenger Transportation Services
+549,AIRP.PA,FR0000120073,Chemicals
+550,SASY.PA,FR0000120578,Pharmaceuticals
+551,TFFP.PA,FR0000054900,Media & Publishing
+552,CARM.PA,FR0010828137,Residential & Commercial REITs
+553,ESLX.PA,FR0000121667,Healthcare Equipment & Supplies
+554,AM.PA,FR0014004L86,Aerospace & Defense
+555,AMUN.PA,FR0004125920,Investment Banking & Investment Services
+556,AIR.PA,NL0000235190,Aerospace & Defense
+557,AXAF.PA,FR0000120628,Insurance
+558,GFCP.PA,FR0010040865,Residential & Commercial REITs
+559,MT.AS,LU1598757687,Metals & Mining
+560,ENGIE.PA,FR0010208488,Multiline Utilities
+561,VU.PA,FR0010282822,Electronic Equipment & Parts
+562,DBG.PA,FR0000053381,Professional & Commercial Services
+563,BOUY.PA,FR0000120503,Construction & Engineering
+564,VLLP.PA,FR0013506730,Oil & Gas Related Equipment and Services
+565,UBIP.PA,FR0000054470,Software & IT Services
+566,EDF.PA^F23,FR0010242511,Multiline Utilities
+567,SEBF.PA,FR0000121709,Household Goods
+568,MERY.PA,FR0010241638,Residential & Commercial REITs
+569,CASP.PA,FR001400OKR3,Food & Drug Retailing
+570,SPIE.PA,FR0012757854,Construction & Engineering
+571,GTT.PA,FR0011726835,Oil & Gas Related Equipment and Services
+572,FOUG.PA,FR0000130452,Construction & Engineering
+573,VLOF.PA,FR0013176526,Automobiles & Auto Parts
+574,ICAD.PA,FR0000035081,Residential & Commercial REITs
+575,SESFd.PA,LU0088087324,Telecommunications Services
+576,ERMT.PA,FR0000131757,Metals & Mining
+577,MMTP.PA,FR0000053225,Media & Publishing
+578,LVMH.PA,FR0000121014,Textiles & Apparel
+579,SCHN.PA,FR0000121972,"Machinery, Tools, Heavy Vehicles, Trains & Ships"
+580,ISOS.PA,FR0000073298,Media & Publishing
+581,CAGR.PA,FR0000045072,Banking Services
+582,SOGN.PA,FR0000130809,Banking Services
+583,BIOX.PA,FR0013280286,Healthcare Equipment & Supplies
+584,NEXI.PA,FR0010112524,Real Estate Operations
+585,LEGD.PA,FR0010307819,"Machinery, Tools, Heavy Vehicles, Trains & Ships"
+586,SGOB.PA,FR0000125007,Homebuilding & Construction Supplies
+587,ELIS.PA,FR0012435121,Professional & Commercial Services
+588,FRVIA.PA,FR0000121147,Automobiles & Auto Parts
+589,IMTP.PA,FR0000120859,Metals & Mining
+590,SOPR.PA,FR0000050809,Software & IT Services
+591,S30.PA,FR0013379484,Software & IT Services
+592,SOLB.BR,BE0003470755,Chemicals
+593,CARR.PA,FR0000120172,Food & Drug Retailing
+594,TTEF.PA,FR0000120271,Oil & Gas
+595,GETP.PA,FR0010533075,Transport Infrastructure
+596,RUBF.PA,FR0013269123,Oil & Gas
+597,JCDX.PA,FR0000077919,Media & Publishing
+598,ETL.PA,FR0010221234,Telecommunications Services
+599,RENA.PA,FR0000131906,Automobiles & Auto Parts
+600,PUBP.PA,FR0000130577,Media & Publishing
+601,CLARI.PA,FR0010386334,Healthcare Providers & Services
+602,LOIM.PA,FR0000121964,Residential & Commercial REITs
+603,ADP.PA,FR0010340141,Transport Infrastructure
+604,TE.PA,NL0014559478,Oil & Gas Related Equipment and Services
+605,IPAR.PA,FR0004024222,Personal & Household Products & Services
+606,SCOR.PA,FR0010411983,Insurance
+607,DAMA.PA^B23,FR0013199916,Homebuilding & Construction Supplies
+608,VIRB.PA,FR0000031577,Pharmaceuticals
+609,TEPRF.PA,FR0000051807,Professional & Commercial Services
+610,VIE.PA,FR0000124141,Multiline Utilities
+611,VRLA.PA,FR0013447729,Containers & Packaging
+612,OREP.PA,FR0000120321,Personal & Household Products & Services
+613,FDJU.PA,FR0013451333,Hotels & Entertainment Services
+614,NEOEN.PA^D25,FR0011675362,Electric Utilities & IPPs
+615,ALSO.PA,FR0010220475,"Machinery, Tools, Heavy Vehicles, Trains & Ships"
+616,PERP.PA,FR0000120693,Beverages
+617,OPM.PA,FR0000124570,Automobiles & Auto Parts
+618,EURA.PA,FR0000121121,Investment Banking & Investment Services
+619,STMPA.PA,NL0000226223,Semiconductors & Semiconductor Equipment
+620,WLN.PA,FR0011981968,Financial Technology (Fintech) & Infrastructure
+621,TCFP.PA,FR0000121329,Aerospace & Defense
+622,VIRI.PA,FR001400PVN6,Oil & Gas Related Equipment and Services
+623,EAPI.PA,FR0014008VX5,Pharmaceuticals
+624,AKE.PA,FR0010313833,Chemicals
+625,CAPP.PA,FR0000125338,Software & IT Services
+626,TRIA.PA,FR0005691656,Leisure Products
+627,CVO.PA,FR0000064578,Residential & Commercial REITs
+628,RXL.PA,FR0010451203,"Machinery, Tools, Heavy Vehicles, Trains & Ships"
+629,CBLP.PA,FR0000039620,"Machinery, Tools, Heavy Vehicles, Trains & Ships"
+630,EMEIS.PA,FR001400NLM4,Healthcare Providers & Services
+631,SGEF.PA,FR0000125486,Construction & Engineering
+632,URW.PA,FR0013326246,Residential & Commercial REITs
+633,NEXS.PA,FR0000044448,"Machinery, Tools, Heavy Vehicles, Trains & Ships"
+634,APAM.AS,LU0569974404,Metals & Mining
+635,LTEN.PA,FR0000071946,Software & IT Services
+636,VIV.PA,FR0000127771,Media & Publishing
+637,IPN.PA,FR0010259150,Pharmaceuticals
+638,SOIT.PA,FR0013227113,Semiconductors & Semiconductor Equipment
+639,STLAM.PA,NL00150001Q9,Automobiles & Auto Parts
+640,STDM.PA,FR0013154002,Healthcare Equipment & Supplies
+641,BOLL.PA,FR0000039299,Media & Publishing
+642,EDEN.PA,FR0010908533,Professional & Commercial Services
+643,BNPP.PA,FR0000131104,Banking Services
+644,HRMS.PA,FR0000052292,Textiles & Apparel
+645,COFA.PA,FR0010667147,Insurance
+646,DANO.PA,FR0000120644,Food & Tobacco
+647,VLS.PA,FR0004056851,Biotechnology & Medical Research
+648,PRTP.PA,FR0000121485,Specialty Retailers
+649,AYV.PA,FR0013258662,Freight & Logistics Services
+650,BICP.PA,FR0000120966,Professional & Commercial Services
+651,ATOS.PA,FR001400X2S4,Software & IT Services
+652,ELIOR.PA,FR0011950732,Hotels & Entertainment Services
+653,FNAC.PA,FR0011476928,Specialty Retailers
+654,MICP.PA,FR001400AJ45,Automobiles & Auto Parts
+655,SAF.PA,FR0000073272,Aerospace & Defense
+656,RCOP.PA,FR0000130395,Beverages
+657,DAST.PA,FR0014003TT8,Software & IT Services
+658,ACCP.PA,FR0000120404,Hotels & Entertainment Services
+659,MWDP.PA,FR0000121204,Investment Holding Companies
+660,ORAN.PA,FR0000133308,Telecommunications Services
+661,IDLA.PA,FR0010929125,Freight & Logistics Services
+662,EUFI.PA,FR0014000MR3,Biotechnology & Medical Research
+663,EXHO.PA,FR0000121220,Hotels & Entertainment Services
+664,ENX.PA,NL0006294274,Investment Banking & Investment Services
+665,BVI.PA,FR0006174348,Professional & Commercial Services
+666,AIRF.PA,FR001400J770,Passenger Transportation Services
+667,AIRP.PA,FR0000120073,Chemicals
+668,SASY.PA,FR0000120578,Pharmaceuticals
+669,TFFP.PA,FR0000054900,Media & Publishing
+670,CARM.PA,FR0010828137,Residential & Commercial REITs
+671,ESLX.PA,FR0000121667,Healthcare Equipment & Supplies
+672,AM.PA,FR0014004L86,Aerospace & Defense
+673,AMUN.PA,FR0004125920,Investment Banking & Investment Services
+674,AIR.PA,NL0000235190,Aerospace & Defense
+675,AXAF.PA,FR0000120628,Insurance
+676,GFCP.PA,FR0010040865,Residential & Commercial REITs
+677,MT.AS,LU1598757687,Metals & Mining
+678,ENGIE.PA,FR0010208488,Multiline Utilities
+679,VU.PA,FR0010282822,Electronic Equipment & Parts
+680,DBG.PA,FR0000053381,Professional & Commercial Services
+681,BOUY.PA,FR0000120503,Construction & Engineering
+682,VLLP.PA,FR0013506730,Oil & Gas Related Equipment and Services
+683,UBIP.PA,FR0000054470,Software & IT Services
+684,SEBF.PA,FR0000121709,Household Goods
+685,MERY.PA,FR0010241638,Residential & Commercial REITs
+686,SPIE.PA,FR0012757854,Construction & Engineering
+687,GTT.PA,FR0011726835,Oil & Gas Related Equipment and Services
+688,FOUG.PA,FR0000130452,Construction & Engineering
+689,VLOF.PA,FR0013176526,Automobiles & Auto Parts
+690,ICAD.PA,FR0000035081,Residential & Commercial REITs
+691,SESFd.PA,LU0088087324,Telecommunications Services
+692,ERMT.PA,FR0000131757,Metals & Mining
+693,MMTP.PA,FR0000053225,Media & Publishing
+694,LVMH.PA,FR0000121014,Textiles & Apparel
+695,SCHN.PA,FR0000121972,"Machinery, Tools, Heavy Vehicles, Trains & Ships"
+696,ISOS.PA,FR0000073298,Media & Publishing
+697,CAGR.PA,FR0000045072,Banking Services
+698,SOGN.PA,FR0000130809,Banking Services
+699,BIOX.PA,FR0013280286,Healthcare Equipment & Supplies
+700,NEXI.PA,FR0010112524,Real Estate Operations
+701,LEGD.PA,FR0010307819,"Machinery, Tools, Heavy Vehicles, Trains & Ships"
+702,SGOB.PA,FR0000125007,Homebuilding & Construction Supplies
+703,ELIS.PA,FR0012435121,Professional & Commercial Services
+704,FRVIA.PA,FR0000121147,Automobiles & Auto Parts
+705,IMTP.PA,FR0000120859,Metals & Mining
+706,SOPR.PA,FR0000050809,Software & IT Services
+707,S30.PA,FR0013379484,Software & IT Services
+708,SOLB.BR,BE0003470755,Chemicals
+709,CARR.PA,FR0000120172,Food & Drug Retailing
+710,LECS.PA,FR0000065484,Software & IT Services
+711,TTEF.PA,FR0000120271,Oil & Gas
+712,GETP.PA,FR0010533075,Transport Infrastructure
+713,RUBF.PA,FR0013269123,Oil & Gas
+714,JCDX.PA,FR0000077919,Media & Publishing
+715,ETL.PA,FR0010221234,Telecommunications Services
+716,RENA.PA,FR0000131906,Automobiles & Auto Parts
+717,PUBP.PA,FR0000130577,Media & Publishing
+718,CLARI.PA,FR0010386334,Healthcare Providers & Services
+719,VLTSA.PA,FR0011995588,Electric Utilities & IPPs
+720,CHBE.PA,FR0000035164,Leisure Products
+721,LOIM.PA,FR0000121964,Residential & Commercial REITs
+722,ADP.PA,FR0010340141,Transport Infrastructure
+723,TE.PA,NL0014559478,Oil & Gas Related Equipment and Services
+724,IPAR.PA,FR0004024222,Personal & Household Products & Services
+725,SCOR.PA,FR0010411983,Insurance
+726,VIRB.PA,FR0000031577,Pharmaceuticals
+727,TEPRF.PA,FR0000051807,Professional & Commercial Services
+728,VIE.PA,FR0000124141,Multiline Utilities
+729,VRLA.PA,FR0013447729,Containers & Packaging
+730,XFAB.PA,BE0974310428,Semiconductors & Semiconductor Equipment
+731,OREP.PA,FR0000120321,Personal & Household Products & Services
+732,FDJU.PA,FR0013451333,Hotels & Entertainment Services
+733,NEOEN.PA^D25,FR0011675362,Electric Utilities & IPPs
+734,ALSO.PA,FR0010220475,"Machinery, Tools, Heavy Vehicles, Trains & Ships"
+735,ARGAN.PA,FR0010481960,Residential & Commercial REITs
+736,PERP.PA,FR0000120693,Beverages
+737,OPM.PA,FR0000124570,Automobiles & Auto Parts
+738,EURA.PA,FR0000121121,Investment Banking & Investment Services
+739,STMPA.PA,NL0000226223,Semiconductors & Semiconductor Equipment
+740,WLN.PA,FR0011981968,Financial Technology (Fintech) & Infrastructure
+741,TCFP.PA,FR0000121329,Aerospace & Defense
+742,VIRI.PA,FR001400PVN6,Oil & Gas Related Equipment and Services
+743,EAPI.PA,FR0014008VX5,Pharmaceuticals
+744,AKE.PA,FR0010313833,Chemicals
+745,CAPP.PA,FR0000125338,Software & IT Services
+746,TRIA.PA,FR0005691656,Leisure Products
+747,CVO.PA,FR0000064578,Residential & Commercial REITs
+748,RXL.PA,FR0010451203,"Machinery, Tools, Heavy Vehicles, Trains & Ships"
+749,CBLP.PA,FR0000039620,"Machinery, Tools, Heavy Vehicles, Trains & Ships"
+750,EMEIS.PA,FR001400NLM4,Healthcare Providers & Services
+751,ESSF.PA,FR0000120669,Oil & Gas
+752,SGEF.PA,FR0000125486,Construction & Engineering
+753,URW.PA,FR0013326246,Residential & Commercial REITs
+754,NEXS.PA,FR0000044448,"Machinery, Tools, Heavy Vehicles, Trains & Ships"
+755,APAM.AS,LU0569974404,Metals & Mining
+756,LTEN.PA,FR0000071946,Software & IT Services
+757,VIV.PA,FR0000127771,Media & Publishing
+758,IPN.PA,FR0010259150,Pharmaceuticals
+759,SOIT.PA,FR0013227113,Semiconductors & Semiconductor Equipment
+760,STLAM.PA,NL00150001Q9,Automobiles & Auto Parts
+761,STDM.PA,FR0013154002,Healthcare Equipment & Supplies
+762,BOLL.PA,FR0000039299,Media & Publishing
+763,EDEN.PA,FR0010908533,Professional & Commercial Services
+764,ROBF.PA,FR0000039091,Chemicals
+765,BNPP.PA,FR0000131104,Banking Services
+766,HRMS.PA,FR0000052292,Textiles & Apparel
+767,COFA.PA,FR0010667147,Insurance
+768,DANO.PA,FR0000120644,Food & Tobacco
+769,VLS.PA,FR0004056851,Biotechnology & Medical Research
+770,PRTP.PA,FR0000121485,Specialty Retailers
+771,AYV.PA,FR0013258662,Freight & Logistics Services
+772,BICP.PA,FR0000120966,Professional & Commercial Services
+773,ATOS.PA,FR001400X2S4,Software & IT Services
+774,ELIOR.PA,FR0011950732,Hotels & Entertainment Services
+775,MICP.PA,FR001400AJ45,Automobiles & Auto Parts
+776,SAF.PA,FR0000073272,Aerospace & Defense
+777,RCOP.PA,FR0000130395,Beverages
+778,DAST.PA,FR0014003TT8,Software & IT Services
+779,ACCP.PA,FR0000120404,Hotels & Entertainment Services
+780,MWDP.PA,FR0000121204,Investment Holding Companies
+781,ORAN.PA,FR0000133308,Telecommunications Services
+782,IDLA.PA,FR0010929125,Freight & Logistics Services
+783,EUFI.PA,FR0014000MR3,Biotechnology & Medical Research
+784,EXHO.PA,FR0000121220,Hotels & Entertainment Services
+785,MAUP.PA,FR0000051070,Oil & Gas
+786,ENX.PA,NL0006294274,Investment Banking & Investment Services
+787,BVI.PA,FR0006174348,Professional & Commercial Services
+788,AIRF.PA,FR001400J770,Passenger Transportation Services
+789,AIRP.PA,FR0000120073,Chemicals
+790,SASY.PA,FR0000120578,Pharmaceuticals
+791,TFFP.PA,FR0000054900,Media & Publishing
+792,CARM.PA,FR0010828137,Residential & Commercial REITs
+793,ESLX.PA,FR0000121667,Healthcare Equipment & Supplies
+794,AM.PA,FR0014004L86,Aerospace & Defense
+795,AMUN.PA,FR0004125920,Investment Banking & Investment Services
+796,AIR.PA,NL0000235190,Aerospace & Defense
+797,AXAF.PA,FR0000120628,Insurance
+798,GFCP.PA,FR0010040865,Residential & Commercial REITs
+799,MT.AS,LU1598757687,Metals & Mining
+800,ENGIE.PA,FR0010208488,Multiline Utilities
+801,VU.PA,FR0010282822,Electronic Equipment & Parts
+802,DBG.PA,FR0000053381,Professional & Commercial Services
+803,BOUY.PA,FR0000120503,Construction & Engineering
+804,VLLP.PA,FR0013506730,Oil & Gas Related Equipment and Services
+805,UBIP.PA,FR0000054470,Software & IT Services
+806,SEBF.PA,FR0000121709,Household Goods
+807,MERY.PA,FR0010241638,Residential & Commercial REITs
+808,PLX.PA,NL0015001W49,Professional & Commercial Services
+809,SPIE.PA,FR0012757854,Construction & Engineering
+810,GTT.PA,FR0011726835,Oil & Gas Related Equipment and Services
+811,FOUG.PA,FR0000130452,Construction & Engineering
+812,VLOF.PA,FR0013176526,Automobiles & Auto Parts
+813,ICAD.PA,FR0000035081,Residential & Commercial REITs
+814,SESFd.PA,LU0088087324,Telecommunications Services
+815,ERMT.PA,FR0000131757,Metals & Mining
+816,MMTP.PA,FR0000053225,Media & Publishing
+817,LVMH.PA,FR0000121014,Textiles & Apparel
+818,SCHN.PA,FR0000121972,"Machinery, Tools, Heavy Vehicles, Trains & Ships"
+819,ISOS.PA,FR0000073298,Media & Publishing
+820,CAGR.PA,FR0000045072,Banking Services
+821,SOGN.PA,FR0000130809,Banking Services
+822,BIOX.PA,FR0013280286,Healthcare Equipment & Supplies
+823,NEXI.PA,FR0010112524,Real Estate Operations
+824,LEGD.PA,FR0010307819,"Machinery, Tools, Heavy Vehicles, Trains & Ships"
+825,SGOB.PA,FR0000125007,Homebuilding & Construction Supplies
+826,ELIS.PA,FR0012435121,Professional & Commercial Services
+827,FRVIA.PA,FR0000121147,Automobiles & Auto Parts
+828,IMTP.PA,FR0000120859,Metals & Mining
+829,SOPR.PA,FR0000050809,Software & IT Services
+830,SOLB.BR,BE0003470755,Chemicals
+831,CARR.PA,FR0000120172,Food & Drug Retailing
+832,TTEF.PA,FR0000120271,Oil & Gas
+833,GETP.PA,FR0010533075,Transport Infrastructure
+834,RUBF.PA,FR0013269123,Oil & Gas
+835,JCDX.PA,FR0000077919,Media & Publishing
+836,RENA.PA,FR0000131906,Automobiles & Auto Parts
+837,PUBP.PA,FR0000130577,Media & Publishing
+838,CLARI.PA,FR0010386334,Healthcare Providers & Services
+839,CHBE.PA,FR0000035164,Leisure Products
+840,LOIM.PA,FR0000121964,Residential & Commercial REITs
+841,ADP.PA,FR0010340141,Transport Infrastructure
+842,TE.PA,NL0014559478,Oil & Gas Related Equipment and Services
+843,IPAR.PA,FR0004024222,Personal & Household Products & Services
+844,SCOR.PA,FR0010411983,Insurance
+845,MEDCL.PA,FR0004065605,Pharmaceuticals
+846,VCTP.PA,FR0000031775,Construction Materials
+847,VIRB.PA,FR0000031577,Pharmaceuticals
+848,TEPRF.PA,FR0000051807,Professional & Commercial Services
+849,VIE.PA,FR0000124141,Multiline Utilities
+850,PLNW.PA,FR001400PFU4,Software & IT Services
+851,VRLA.PA,FR0013447729,Containers & Packaging
+852,OREP.PA,FR0000120321,Personal & Household Products & Services
+853,FDJU.PA,FR0013451333,Hotels & Entertainment Services
+854,NEOEN.PA^D25,FR0011675362,Electric Utilities & IPPs
+855,ALSO.PA,FR0010220475,"Machinery, Tools, Heavy Vehicles, Trains & Ships"
+856,ARGAN.PA,FR0010481960,Residential & Commercial REITs
+857,PERP.PA,FR0000120693,Beverages
+858,OPM.PA,FR0000124570,Automobiles & Auto Parts
+859,EURA.PA,FR0000121121,Investment Banking & Investment Services
+860,STMPA.PA,NL0000226223,Semiconductors & Semiconductor Equipment
+861,WLN.PA,FR0011981968,Financial Technology (Fintech) & Infrastructure
+862,TCFP.PA,FR0000121329,Aerospace & Defense
+863,VIRI.PA,FR001400PVN6,Oil & Gas Related Equipment and Services
+864,AKE.PA,FR0010313833,Chemicals
+865,CAPP.PA,FR0000125338,Software & IT Services
+866,BASFn.DE,DE000BASF111,Chemicals
+867,IFXGn.DE,DE0006231004,Semiconductors & Semiconductor Equipment
+868,SIEGn.DE,DE0007236101,"Machinery, Tools, Heavy Vehicles, Trains & Ships"
+869,EONGn.DE,DE000ENAG999,Multiline Utilities
+870,DBKGn.DE,DE0005140008,Banking Services
+871,SAPG.DE,DE0007164600,Software & IT Services
+872,BAYGn.DE,DE000BAY0017,Pharmaceuticals
+873,RWEG.DE,DE0007037129,Multiline Utilities
+874,1COVG.DE,DE0006062144,Chemicals
+875,HNKG_p.DE,DE0006048432,Chemicals
+876,DTEGn.DE,DE0005557508,Telecommunications Services
+877,LIN.DE,IE000S9YS762,Chemicals
+878,MRCG.DE,DE0006599905,Pharmaceuticals
+879,VOWG_p.DE,DE0007664039,Automobiles & Auto Parts
+880,BMWG.DE,DE0005190003,Automobiles & Auto Parts
+881,BEIG.DE,DE0005200000,Personal & Household Products & Services
+882,HEIG.DE,DE0006047004,Construction Materials
+883,MTXGn.DE,DE000A0D9PT0,Aerospace & Defense
+884,FMEG.DE,DE0005785802,Healthcare Providers & Services
+885,FREG.DE,DE0005785604,Healthcare Providers & Services
+886,DHLn.DE,DE0005552004,Freight & Logistics Services
+887,ALVG.DE,DE0008404005,Insurance
+888,LHAG.DE,DE0008232125,Passenger Transportation Services
+889,MUVGn.DE,DE0008430026,Insurance
+890,CONG.DE,DE0005439004,Automobiles & Auto Parts
+891,ADSGn.DE,DE000A1EWWW0,Textiles & Apparel
+892,MBGn.DE,DE0007100000,Automobiles & Auto Parts
+893,VNAn.DE,DE000A1ML7J1,Real Estate Operations
+894,DB1Gn.DE,DE0005810055,Investment Banking & Investment Services
+895,WDIG.DE^A21,DE0007472060,Professional & Commercial Services
+896,DWNG.DE,DE000A0HN5C6,Real Estate Operations
+897,DHER.DE,DE000A2E4K43,Software & IT Services
+898,SATG_p.DE,DE0007165631,Healthcare Equipment & Supplies
+899,ZALG.DE,DE000ZAL1111,Software & IT Services
+900,PSHG_p.DE,DE000PAH0038,Automobiles & Auto Parts
+901,HFGG.DE,DE000A161408,Food & Drug Retailing
+902,SHLG.DE,DE000SHL1006,Healthcare Equipment & Supplies
+903,SY1G.DE,DE000SYM9999,Chemicals
+904,DHER.DE,DE000A2E4K43,Software & IT Services
+905,ENR1n.DE,DE000ENER6Y0,Renewable Energy
+906,MBGn.DE,DE0007100000,Automobiles & Auto Parts
+907,BNRGn.DE,DE000A1DAHH0,Chemicals
+908,AIRG.DE,NL0000235190,Aerospace & Defense
+909,VNAn.DE,DE000A1ML7J1,Real Estate Operations
+910,DB1Gn.DE,DE0005810055,Investment Banking & Investment Services
+911,PUMG.DE,DE0006969603,Textiles & Apparel
+912,QIA.DE,NL0015002CX3,Biotechnology & Medical Research
+913,BASFn.DE,DE000BASF111,Chemicals
+914,IFXGn.DE,DE0006231004,Semiconductors & Semiconductor Equipment
+915,SIEGn.DE,DE0007236101,"Machinery, Tools, Heavy Vehicles, Trains & Ships"
+916,EONGn.DE,DE000ENAG999,Multiline Utilities
+917,DBKGn.DE,DE0005140008,Banking Services
+918,SATG_p.DE,DE0007165631,Healthcare Equipment & Supplies
+919,SAPG.DE,DE0007164600,Software & IT Services
+920,BAYGn.DE,DE000BAY0017,Pharmaceuticals
+921,RWEG.DE,DE0007037129,Multiline Utilities
+922,1COVG.DE,DE0006062144,Chemicals
+923,HNKG_p.DE,DE0006048432,Chemicals
+924,ZALG.DE,DE000ZAL1111,Software & IT Services
+925,DTEGn.DE,DE0005557508,Telecommunications Services
+926,LIN.DE,IE000S9YS762,Chemicals
+927,MRCG.DE,DE0006599905,Pharmaceuticals
+928,PSHG_p.DE,DE000PAH0038,Automobiles & Auto Parts
+929,VOWG_p.DE,DE0007664039,Automobiles & Auto Parts
+930,BMWG.DE,DE0005190003,Automobiles & Auto Parts
+931,BEIG.DE,DE0005200000,Personal & Household Products & Services
+932,HEIG.DE,DE0006047004,Construction Materials
+933,MTXGn.DE,DE000A0D9PT0,Aerospace & Defense
+934,FMEG.DE,DE0005785802,Healthcare Providers & Services
+935,FREG.DE,DE0005785604,Healthcare Providers & Services
+936,DHLn.DE,DE0005552004,Freight & Logistics Services
+937,ALVG.DE,DE0008404005,Insurance
+938,MUVGn.DE,DE0008430026,Insurance
+939,CONG.DE,DE0005439004,Automobiles & Auto Parts
+940,SHLG.DE,DE000SHL1006,Healthcare Equipment & Supplies
+941,SY1G.DE,DE000SYM9999,Chemicals
+942,ADSGn.DE,DE000A1EWWW0,Textiles & Apparel
+943,HNRGn.DE,DE0008402215,Insurance
+944,DTGGe.DE,DE000DTR0CK8,"Machinery, Tools, Heavy Vehicles, Trains & Ships"
+945,P911_p.DE,DE000PAG9113,Automobiles & Auto Parts
+946,RHMG.DE,DE0007030009,Aerospace & Defense
+947,CBKG.DE,DE000CBK1001,Banking Services
+948,DTEGn.DE,DE0005557508,Telecommunications Services
+949,MRCG.DE,DE0006599905,Pharmaceuticals
+950,PSHG_p.DE,DE000PAH0038,Automobiles & Auto Parts
+951,VOWG_p.DE,DE0007664039,Automobiles & Auto Parts
+952,BMWG.DE,DE0005190003,Automobiles & Auto Parts
+953,BEIG.DE,DE0005200000,Personal & Household Products & Services
+954,HEIG.DE,DE0006047004,Construction Materials
+955,RHMG.DE,DE0007030009,Aerospace & Defense
+956,MTXGn.DE,DE000A0D9PT0,Aerospace & Defense
+957,FMEG.DE,DE0005785802,Healthcare Providers & Services
+958,FREG.DE,DE0005785604,Healthcare Providers & Services
+959,DHLn.DE,DE0005552004,Freight & Logistics Services
+960,ALVG.DE,DE0008404005,Insurance
+961,MUVGn.DE,DE0008430026,Insurance
+962,CONG.DE,DE0005439004,Automobiles & Auto Parts
+963,SHLG.DE,DE000SHL1006,Healthcare Equipment & Supplies
+964,SY1G.DE,DE000SYM9999,Chemicals
+965,ADSGn.DE,DE000A1EWWW0,Textiles & Apparel
+966,HNRGn.DE,DE0008402215,Insurance
+967,DTGGe.DE,DE000DTR0CK8,"Machinery, Tools, Heavy Vehicles, Trains & Ships"
+968,ENR1n.DE,DE000ENER6Y0,Renewable Energy
+969,MBGn.DE,DE0007100000,Automobiles & Auto Parts
+970,BNRGn.DE,DE000A1DAHH0,Chemicals
+971,CBKG.DE,DE000CBK1001,Banking Services
+972,AIRG.DE,NL0000235190,Aerospace & Defense
+973,VNAn.DE,DE000A1ML7J1,Real Estate Operations
+974,DB1Gn.DE,DE0005810055,Investment Banking & Investment Services
+975,QIA.DE,NL0015002CX3,Biotechnology & Medical Research
+976,P911_p.DE,DE000PAG9113,Automobiles & Auto Parts
+977,PRX.AS,NL0013654783,Software & IT Services
+978,MT.AS,LU1598757687,Metals & Mining
+979,ASRNL.AS,NL0011872643,Insurance
+980,RAND.AS,NL0000379121,Professional & Commercial Services
+981,ASML.AS,NL0010273215,Semiconductors & Semiconductor Equipment
+982,AEGN.AS,BMG0112X1056,Insurance
+983,SHEL.AS,GB00BP6MXD84,Oil & Gas
+984,INGA.AS,NL0011821202,Banking Services
+985,ABNd.AS,NL0011540547,Banking Services
+986,DSMN.AS^E23,NL0000009827,Consumer Goods Conglomerates
+987,AKZO.AS,NL0013267909,Chemicals
+988,VOPA.AS,NL0009432491,Oil & Gas Related Equipment and Services
+989,IMCD.AS,NL0010801007,Chemicals
+990,HEIN.AS,NL0000009165,Beverages
+991,REL.AS,GB00B2B0DG97,Software & IT Services
+992,AALB.AS,NL0000852564,"Machinery, Tools, Heavy Vehicles, Trains & Ships"
+993,PHG.AS,NL0000009538,Healthcare Equipment & Supplies
+994,UNA.AS^K20,NL0000388619,Personal & Household Products & Services
+995,AD.AS,NL0011794037,Food & Drug Retailing
+996,WLSNc.AS,NL0000395903,Professional & Commercial Services
+997,ADYEN.AS,NL0012969182,Financial Technology (Fintech) & Infrastructure
+998,URW.PA,FR0013326246,Residential & Commercial REITs
+999,NN.AS,NL0010773842,Insurance
+1000,GLPG.AS,BE0003818359,Biotechnology & Medical Research
+1001,KPN.AS,NL0000009082,Telecommunications Services
+1002,TKWY.AS,NL0012015705,Software & IT Services
+1003,ULVR.AS,GB00B10RZP78,Personal & Household Products & Services
+1004,ASMI.AS,NL0000334118,Semiconductors & Semiconductor Equipment
+1005,BESI.AS,NL0012866412,Semiconductors & Semiconductor Equipment
+1006,WLSNc.AS,NL0000395903,Professional & Commercial Services
+1007,ADYEN.AS,NL0012969182,Financial Technology (Fintech) & Infrastructure
+1008,URW.PA,FR0013326246,Residential & Commercial REITs
+1009,LIGHT.AS,NL0011821392,Homebuilding & Construction Supplies
+1010,NN.AS,NL0010773842,Insurance
+1011,KPN.AS,NL0000009082,Telecommunications Services
+1012,UMG.AS,NL0015000IY2,Media & Publishing
+1013,TKWY.AS,NL0012015705,Software & IT Services
+1014,PRX.AS,NL0013654783,Software & IT Services
+1015,MT.AS,LU1598757687,Metals & Mining
+1016,BESI.AS,NL0012866412,Semiconductors & Semiconductor Equipment
+1017,EXOR.AS,NL0012059018,"Machinery, Tools, Heavy Vehicles, Trains & Ships"
+1018,ULVR.AS,GB00B10RZP78,Personal & Household Products & Services
+1019,SHEL.AS,GB00BP6MXD84,Oil & Gas
+1020,RAND.AS,NL0000379121,Professional & Commercial Services
+1021,ASMI.AS,NL0000334118,Semiconductors & Semiconductor Equipment
+1022,ASML.AS,NL0010273215,Semiconductors & Semiconductor Equipment
+1023,AEGN.AS,BMG0112X1056,Insurance
+1024,INGA.AS,NL0011821202,Banking Services
+1025,DSMN.AS^E23,NL0000009827,Consumer Goods Conglomerates
+1026,AKZO.AS,NL0013267909,Chemicals
+1027,IMCD.AS,NL0010801007,Chemicals
+1028,HEIN.AS,NL0000009165,Beverages
+1029,REL.AS,GB00B2B0DG97,Software & IT Services
+1030,PHG.AS,NL0000009538,Healthcare Equipment & Supplies
+1031,AD.AS,NL0011794037,Food & Drug Retailing
+1032,DSFIR.AS,CH1216478797,Consumer Goods Conglomerates
+1033,ASRNL.AS,NL0011872643,Insurance
+1034,ABNd.AS,NL0011540547,Banking Services
+1035,BOSN.AS^K22,NL0000852580,Construction & Engineering
+1036,AIRF.PA,FR001400J770,Passenger Transportation Services
+1037,PTNL.AS,NL0009739416,Freight & Logistics Services
+1038,ATCA.AS^A21,NL0011333752,Telecommunications Services
+1039,BFIT.AS,NL0011872650,Hotels & Entertainment Services
+1040,SBMO.AS,NL0000360618,Oil & Gas Related Equipment and Services
+1041,LIGHT.AS,NL0011821392,Homebuilding & Construction Supplies
+1042,BAMN.AS,NL0000337319,Construction & Engineering
+1043,TKWY.AS,NL0012015705,Software & IT Services
+1044,GVNV.AS^A22,NL0010937066,Specialty Retailers
+1045,APAM.AS,LU0569974404,Metals & Mining
+1046,CORB.AS,NL0010583399,Chemicals
+1047,AMG.AS,NL0000888691,Metals & Mining
+1048,ARDS.AS,NL0006237562,Construction & Engineering
+1049,ASMI.AS,NL0000334118,Semiconductors & Semiconductor Equipment
+1050,OCI.AS,NL0010558797,Chemicals
+1051,WDPP.BR,BE0974349814,Residential & Commercial REITs
+1052,FLOW.AS,BMG3602E1084,Investment Banking & Investment Services
+1053,FUGR.AS,NL00150003E1,Oil & Gas Related Equipment and Services
+1054,TWKNc.AS,NL0000852523,"Machinery, Tools, Heavy Vehicles, Trains & Ships"
+1055,INTER.AS^L22,NL0010937058,Professional & Commercial Services
+1056,ECMPA.AS,NL0015000K93,Residential & Commercial REITs
+1057,WEHA.AS,NL0000289213,Residential & Commercial REITs
+1058,FAGRO.BR,BE0003874915,Pharmaceuticals
+1059,BESI.AS,NL0012866412,Semiconductors & Semiconductor Equipment
+1060,BOSN.AS^K22,NL0000852580,Construction & Engineering
+1061,NSTEc.AS,NL0012365084,Residential & Commercial REITs
+1062,AIRF.PA,FR001400J770,Passenger Transportation Services
+1063,PHAR.AS,NL0010391025,Pharmaceuticals
+1064,PTNL.AS,NL0009739416,Freight & Logistics Services
+1065,ATCA.AS^A21,NL0011333752,Telecommunications Services
+1066,BFIT.AS,NL0011872650,Hotels & Entertainment Services
+1067,SBMO.AS,NL0000360618,Oil & Gas Related Equipment and Services
+1068,JDEP.AS,NL0014332678,Food & Tobacco
+1069,VOPA.AS,NL0009432491,Oil & Gas Related Equipment and Services
+1070,AALB.AS,NL0000852564,"Machinery, Tools, Heavy Vehicles, Trains & Ships"
+1071,GLPG.AS,BE0003818359,Biotechnology & Medical Research
+1072,INPST.AS,LU2290522684,Freight & Logistics Services
+1073,ABNd.AS,NL0011540547,Banking Services
+1074,ALFEN.AS,NL0012817175,"Machinery, Tools, Heavy Vehicles, Trains & Ships"
+1075,ASRNL.AS,NL0011872643,Insurance
+1076,CTPNV.AS,NL00150006R6,Real Estate Operations
+1077,VLAN.AS,NL0000302636,Investment Banking & Investment Services
+1078,ALLFG.AS,GB00BNTJ3546,Financial Technology (Fintech) & Infrastructure
+1079,GLPG.AS,BE0003818359,Biotechnology & Medical Research
+1080,INPST.AS,LU2290522684,Freight & Logistics Services
+1081,TKWY.AS,NL0012015705,Software & IT Services
+1082,CTPNV.AS,NL00150006R6,Real Estate Operations
+1083,APAM.AS,LU0569974404,Metals & Mining
+1084,CORB.AS,NL0010583399,Chemicals
+1085,AMG.AS,NL0000888691,Metals & Mining
+1086,ARDS.AS,NL0006237562,Construction & Engineering
+1087,JDEP.AS,NL0014332678,Food & Tobacco
+1088,VOPA.AS,NL0009432491,Oil & Gas Related Equipment and Services
+1089,ALFEN.AS,NL0012817175,"Machinery, Tools, Heavy Vehicles, Trains & Ships"
+1090,OCI.AS,NL0010558797,Chemicals
+1091,WDPP.BR,BE0974349814,Residential & Commercial REITs
+1092,FLOW.AS,BMG3602E1084,Investment Banking & Investment Services
+1093,FUGR.AS,NL00150003E1,Oil & Gas Related Equipment and Services
+1094,TWKNc.AS,NL0000852523,"Machinery, Tools, Heavy Vehicles, Trains & Ships"
+1095,ECMPA.AS,NL0015000K93,Residential & Commercial REITs
+1096,AALB.AS,NL0000852564,"Machinery, Tools, Heavy Vehicles, Trains & Ships"
+1097,FAGRO.BR,BE0003874915,Pharmaceuticals
+1098,VLAN.AS,NL0000302636,Investment Banking & Investment Services
+1099,AIRF.PA,FR001400J770,Passenger Transportation Services
+1100,BFIT.AS,NL0011872650,Hotels & Entertainment Services
+1101,ALLFG.AS,GB00BNTJ3546,Financial Technology (Fintech) & Infrastructure
+1102,SBMO.AS,NL0000360618,Oil & Gas Related Equipment and Services
+1103,LIGHT.AS,NL0011821392,Homebuilding & Construction Supplies
+1104,SALM.OL,NO0010310956,Food & Tobacco
+1105,GJFG.OL,NO0010582521,Insurance
+1106,SUBC.OL,LU0075646355,Oil & Gas Related Equipment and Services
+1107,NEL.OL,NO0010081235,Renewable Energy
+1108,NHY.OL,NO0005052605,Metals & Mining
+1109,FRO.OL,CY0200352116,Oil & Gas Related Equipment and Services
+1110,BAKKA.OL,FO0000000179,Food & Tobacco
+1111,TEL.OL,NO0010063308,Telecommunications Services
+1112,AKRBP.OL,NO0010345853,Oil & Gas
+1113,DNO.OL,NO0003921009,Oil & Gas
+1114,AKER.OL,NO0010234552,Oil & Gas
+1115,VENDA.OL,NO0003028904,Media & Publishing
+1116,YAR.OL,NO0010208051,Chemicals
+1117,NAS.OL,NO0010196140,Passenger Transportation Services
+1118,EQNR.OL,NO0010096985,Oil & Gas
+1119,GOGL.OL^H25,BMG396372051,Freight & Logistics Services
+1120,TGS.OL,NO0003078800,Oil & Gas Related Equipment and Services
+1121,TOM.OL,NO0012470089,"Machinery, Tools, Heavy Vehicles, Trains & Ships"
+1122,STB.OL,NO0003053605,Investment Banking & Investment Services
+1123,BWLPG.OL,SGXZ69436764,Oil & Gas Related Equipment and Services
+1124,LSG.OL,NO0003096208,Food & Tobacco
+1125,MOWI.OL,NO0003054108,Food & Tobacco
+1126,BWO.OL,BMG1738J1247,Oil & Gas Related Equipment and Services
+1127,ORK.OL,NO0003733800,Food & Tobacco
+1128,DNB.OL,NO0010161896,Banking Services
+1129,SCATC.OL,NO0010715139,Electric Utilities & IPPs
+1130,ENTRA.OL,NO0010716418,Real Estate Operations
+1131,BAKKA.OL,FO0000000179,Food & Tobacco
+1132,MPCC.OL,NO0010791353,Freight & Logistics Services
+1133,TEL.OL,NO0010063308,Telecommunications Services
+1134,AKRBP.OL,NO0010345853,Oil & Gas
+1135,SCATC.OL,NO0010715139,Electric Utilities & IPPs
+1136,RECSI.OL,NO0010112675,Chemicals
+1137,AKER.OL,NO0010234552,Oil & Gas
+1138,VENDA.OL,NO0003028904,Media & Publishing
+1139,KAHOT.OL^A24,NO0010823131,Software & IT Services
+1140,YAR.OL,NO0010208051,Chemicals
+1141,NOD.OL,NO0003055501,Semiconductors & Semiconductor Equipment
+1142,EQNR.OL,NO0010096985,Oil & Gas
+1143,GOGL.OL^H25,BMG396372051,Freight & Logistics Services
+1144,TOM.OL,NO0012470089,"Machinery, Tools, Heavy Vehicles, Trains & Ships"
+1145,STB.OL,NO0003053605,Investment Banking & Investment Services
+1146,MOWI.OL,NO0003054108,Food & Tobacco
+1147,ORK.OL,NO0003733800,Food & Tobacco
+1148,ADEA.OL^F24,NO0010844038,Software & IT Services
+1149,DNB.OL,NO0010161896,Banking Services
+1150,SALM.OL,NO0010310956,Food & Tobacco
+1151,SUBC.OL,LU0075646355,Oil & Gas Related Equipment and Services
+1152,NEL.OL,NO0010081235,Renewable Energy
+1153,NHY.OL,NO0005052605,Metals & Mining
+1154,FRO.OL,CY0200352116,Oil & Gas Related Equipment and Services
+1155,AUTO.OL,BMG0670A1099,"Machinery, Tools, Heavy Vehicles, Trains & Ships"
+1156,PGS.OL^G24,NO0010199151,Oil & Gas Related Equipment and Services
+1157,NAS.OL,NO0010196140,Passenger Transportation Services
+1158,VAR.OL,NO0011202772,Oil & Gas
+1159,KOG.OL,NO0013536151,Aerospace & Defense
+1160,GJFG.OL,NO0010582521,Insurance
+1161,HAUTO.OL,NO0011082075,Freight & Logistics Services
+1162,BORR.OL^A25,BMG1466R1732,Oil & Gas Related Equipment and Services
+1163,TGS.OL,NO0003078800,Oil & Gas Related Equipment and Services
+1164,HAFNI.OL,SGXZ53070850,Oil & Gas Related Equipment and Services
+1165,WAWI.OL,NO0010571680,Freight & Logistics Services
+1166,BWLPG.OL,SGXZ69436764,Oil & Gas Related Equipment and Services
+1167,ATCOa.ST,SE0017486889,"Machinery, Tools, Heavy Vehicles, Trains & Ships"
+1168,SAND.ST,SE0000667891,Metals & Mining
+1169,ATCOb.ST,SE0017486897,"Machinery, Tools, Heavy Vehicles, Trains & Ships"
+1170,AZN.ST,GB0009895292,Pharmaceuticals
+1171,ESSITYb.ST,SE0009922164,Personal & Household Products & Services
+1172,ELUXb.ST,SE0016589188,Household Goods
+1173,ALFA.ST,SE0000695876,"Machinery, Tools, Heavy Vehicles, Trains & Ships"
+1174,SSABa.ST,SE0000171100,Metals & Mining
+1175,ASSAb.ST,SE0007100581,Homebuilding & Construction Supplies
+1176,INVEb.ST,SE0015811963,Investment Holding Companies
+1177,NDASE.ST,FI4000297767,Banking Services
+1178,SKAb.ST,SE0000113250,Construction & Engineering
+1179,SECUb.ST,SE0000163594,Professional & Commercial Services
+1180,TEL2b.ST,SE0005190238,Telecommunications Services
+1181,BOL.ST,SE0020050417,Metals & Mining
+1182,SWMA.ST^A23,SE0015812219,Food & Tobacco
+1183,TELIA.ST,SE0000667925,Telecommunications Services
+1184,ERICb.ST,SE0000108656,Communications & Networking
+1185,SEBa.ST,SE0000148884,Banking Services
+1186,GETIb.ST,SE0000202624,Healthcare Equipment & Supplies
+1187,SKFb.ST,SE0000108227,"Machinery, Tools, Heavy Vehicles, Trains & Ships"
+1188,HMb.ST,SE0000106270,Specialty Retailers
+1189,SCAb.ST,SE0000112724,Paper & Forest Products
+1190,HEXAb.ST,SE0015961909,Electronic Equipment & Parts
+1191,ALIVsdb.ST,SE0021309614,Automobiles & Auto Parts
+1192,SHBa.ST,SE0007100599,Banking Services
+1193,VOLVb.ST,SE0000115446,"Machinery, Tools, Heavy Vehicles, Trains & Ships"
+1194,KINVb.ST,SE0022060521,Investment Holding Companies
+1195,ABB.ST,CH0012221716,"Machinery, Tools, Heavy Vehicles, Trains & Ships"
+1196,SWEDa.ST,SE0000242455,Banking Services
+1197,ATCOa.ST,SE0017486889,"Machinery, Tools, Heavy Vehicles, Trains & Ships"
+1198,SINCH.ST,SE0016101844,Software & IT Services
+1199,SAND.ST,SE0000667891,Metals & Mining
+1200,ATCOb.ST,SE0017486897,"Machinery, Tools, Heavy Vehicles, Trains & Ships"
+1201,AZN.ST,GB0009895292,Pharmaceuticals
+1202,ESSITYb.ST,SE0009922164,Personal & Household Products & Services
+1203,ELUXb.ST,SE0016589188,Household Goods
+1204,EVOG.ST,SE0012673267,Hotels & Entertainment Services
+1205,SBBb.ST,SE0009554454,Real Estate Operations
+1206,NIBEb.ST,SE0015988019,"Machinery, Tools, Heavy Vehicles, Trains & Ships"
+1207,SEBa.ST,SE0000148884,Banking Services
+1208,GETIb.ST,SE0000202624,Healthcare Equipment & Supplies
+1209,SKFb.ST,SE0000108227,"Machinery, Tools, Heavy Vehicles, Trains & Ships"
+1210,HMb.ST,SE0000106270,Specialty Retailers
+1211,SBBb.ST,SE0009554454,Real Estate Operations
+1212,SCAb.ST,SE0000112724,Paper & Forest Products
+1213,SAABb.ST,SE0021921269,Aerospace & Defense
+1214,HEXAb.ST,SE0015961909,Electronic Equipment & Parts
+1215,SHBa.ST,SE0007100599,Banking Services
+1216,VOLVb.ST,SE0000115446,"Machinery, Tools, Heavy Vehicles, Trains & Ships"
+1217,KINVb.ST,SE0022060521,Investment Holding Companies
+1218,ABB.ST,CH0012221716,"Machinery, Tools, Heavy Vehicles, Trains & Ships"
+1219,SWEDa.ST,SE0000242455,Banking Services
+1220,ATCOa.ST,SE0017486889,"Machinery, Tools, Heavy Vehicles, Trains & Ships"
+1221,SAND.ST,SE0000667891,Metals & Mining
+1222,ATCOb.ST,SE0017486897,"Machinery, Tools, Heavy Vehicles, Trains & Ships"
+1223,AZN.ST,GB0009895292,Pharmaceuticals
+1224,ESSITYb.ST,SE0009922164,Personal & Household Products & Services
+1225,ELUXb.ST,SE0016589188,Household Goods
+1226,ALFA.ST,SE0000695876,"Machinery, Tools, Heavy Vehicles, Trains & Ships"
+1227,SSABa.ST,SE0000171100,Metals & Mining
+1228,ASSAb.ST,SE0007100581,Homebuilding & Construction Supplies
+1229,INVEb.ST,SE0015811963,Investment Holding Companies
+1230,NDASE.ST,FI4000297767,Banking Services
+1231,SKAb.ST,SE0000113250,Construction & Engineering
+1232,SECUb.ST,SE0000163594,Professional & Commercial Services
+1233,TEL2b.ST,SE0005190238,Telecommunications Services
+1234,BOL.ST,SE0020050417,Metals & Mining
+1235,SWMA.ST^A23,SE0015812219,Food & Tobacco
+1236,TELIA.ST,SE0000667925,Telecommunications Services
+1237,ERICb.ST,SE0000108656,Communications & Networking
+1238,ALIVsdb.ST,SE0021309614,Automobiles & Auto Parts
+1239,SINCH.ST,SE0016101844,Software & IT Services
+1240,EVOG.ST,SE0012673267,Hotels & Entertainment Services
