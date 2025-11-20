@@ -201,9 +201,9 @@ def adf_test(spread: pd.Series,
     
     if lags is None:
         # Auto-select lags using AIC
-        result = adfuller(data, maxlags=maxlags, autolag='AIC')
+        result = adfuller(data, maxlag=maxlags, autolag='AIC')
     else:
-        result = adfuller(data, maxlags=lags, autolag=None)
+        result = adfuller(data, maxlag=lags, autolag=None)
     
     adf_stat, pvalue, usedlag, nobs, critical_values, icbest = result
     
