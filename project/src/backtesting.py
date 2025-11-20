@@ -15,8 +15,8 @@ from datetime import datetime, timedelta
 import warnings
 from itertools import product
 
-from .signal_generation import generate_signals, compute_position_sizes
-from .performance import compute_performance_metrics
+from signal_generation import generate_signals, compute_position_sizes
+from performance import compute_performance_metrics
 
 
 class WalkForwardBacktest:

@@ -14,7 +14,7 @@ from typing import Dict, List, Tuple, Optional
 import warnings
 from pathlib import Path
 
-from .utils import (
+from utils import (
     compute_flow_proxy, compute_flow_pct_aum, compute_adv,
     compute_holdings_overlap, compute_weighting_distance
 )

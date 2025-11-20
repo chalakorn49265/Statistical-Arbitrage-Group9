@@ -5,7 +5,7 @@ Performance evaluation and metrics computation.
 import numpy as np
 import pandas as pd
 from typing import Dict, Optional
-from .utils import (
+from utils import (
     annualize_return, annualize_volatility, sharpe_ratio,
     max_drawdown, calmar_ratio
 )

@@ -270,8 +270,11 @@ def estimate_hedge_ratio_kalman(pair_data: pd.DataFrame,
     y = pair_data['log_price_A']
     x = pair_data['log_price_B']
     
+    # Filter out 'smooth' key if present (not an init parameter)
+    init_config = {k: v for k, v in config.items() if k != 'smooth'}
+    
     # Initialize and run Kalman filter
-    kf = KalmanFilter(**config)
+    kf = KalmanFilter(**init_config)
     result = kf.smooth(y, x)
     
     # Compute spread

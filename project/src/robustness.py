@@ -8,7 +8,7 @@ from typing import Dict, List, Optional, Tuple
 from scipy import stats
 import warnings
 
-from .mean_reversion import estimate_ar1, rolling_ar1
+from mean_reversion import estimate_ar1, rolling_ar1
 
 
 def spa_test(returns: pd.Series,

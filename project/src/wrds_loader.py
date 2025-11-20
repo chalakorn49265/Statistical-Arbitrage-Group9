@@ -13,7 +13,7 @@ import wrds
 from typing import Optional, List, Dict
 import warnings
 
-from .data_loader import ETFDataLoader
+from data_loader import ETFDataLoader
 
 
 class WRDSETFLoader(ETFDataLoader):
@@ -80,90 +80,128 @@ class WRDSETFLoader(ETFDataLoader):
         if end_date is None:
             end_date = datetime.now().strftime('%Y-%m-%d')
         
-        # Convert dates for SQL
-        start_date_sql = datetime.strptime(start_date, '%Y-%m-%d').strftime('%m/%d/%Y')
-        end_date_sql = datetime.strptime(end_date, '%Y-%m-%d').strftime('%m/%d/%Y')
+        # Ensure ticker is uppercase (WRDS is case-sensitive)
+        symbol = symbol.upper()
+        
+        # Convert dates for SQL - use DATE type for better compatibility
+        start_date_obj = datetime.strptime(start_date, '%Y-%m-%d')
+        end_date_obj = datetime.strptime(end_date, '%Y-%m-%d')
+        start_date_sql = start_date_obj.strftime('%Y-%m-%d')
+        end_date_sql = end_date_obj.strftime('%Y-%m-%d')
         
         # Query CRSP for ETF data
-        # Try both dsf (daily stock file) and dse (daily ETF file) using UNION
-        # This handles ETFs that might be in either table
-        query = f"""
-        SELECT 
-            a.date,
-            a.ticker,
-            a.prc as close,
-            a.ret,
-            a.retx,
-            a.shrout as shares_outstanding,
-            a.vol as volume,
-            a.cfacshr,
-            a.cfacpr,
-            b.comnam as company_name
-        FROM crsp.dsf as a
-        LEFT JOIN crsp.stocknames as b
-        ON a.permno = b.permno
-        AND b.namedt <= a.date
-        AND a.date <= b.nameendt
-        WHERE a.ticker = '{symbol}'
-        AND a.date BETWEEN '{start_date_sql}' AND '{end_date_sql}'
+        # Approach: First get permno(s) for the ticker, then query dsf/dse using permno
+        # This is more reliable than joining on every row
         
-        UNION
-        
-        SELECT 
-            a.date,
-            a.ticker,
-            a.prc as close,
-            a.ret,
-            a.retx,
-            a.shrout as shares_outstanding,
-            a.vol as volume,
-            a.cfacshr,
-            a.cfacpr,
-            b.comnam as company_name
-        FROM crsp.dse as a
-        LEFT JOIN crsp.stocknames as b
-        ON a.permno = b.permno
-        AND b.namedt <= a.date
-        AND a.date <= b.nameendt
-        WHERE a.ticker = '{symbol}'
-        AND a.date BETWEEN '{start_date_sql}' AND '{end_date_sql}'
-        
-        ORDER BY date
+        # Step 1: Get permno for the ticker
+        permno_query = f"""
+        SELECT permno, ticker, comnam, namedt, nameenddt
+        FROM crsp.stocknames
+        WHERE ticker = '{symbol}'
+        ORDER BY namedt DESC
+        LIMIT 1
         """
         
         try:
-            df = self.conn.raw_sql(query)
+            permno_df = self.conn.raw_sql(permno_query)
+            if permno_df.empty:
+                warnings.warn(f"Ticker {symbol} not found in crsp.stocknames")
+                return pd.DataFrame()
+            
+            # Use the most recent permno (first row after sorting by namedt DESC)
+            permno = permno_df.iloc[0]['permno']
+            print(f"    Using permno {permno} for {symbol}")
+            
         except Exception as e:
-            # Fallback: try dsf only
+            warnings.warn(f"Failed to get permno for {symbol}: {e}")
+            return pd.DataFrame()
+        
+        # Step 2: Query dsf using permno
+        # Use DATE casting for better compatibility
+        query_dsf = f"""
+        SELECT 
+            a.date,
+            a.prc as close,
+            a.ret,
+            a.retx,
+            a.shrout as shares_outstanding,
+            a.vol as volume,
+            a.cfacshr,
+            a.cfacpr
+        FROM crsp.dsf as a
+        WHERE a.permno = {permno}
+        AND a.date >= DATE '{start_date_sql}'
+        AND a.date <= DATE '{end_date_sql}'
+        ORDER BY a.date
+        """
+        
+        df = pd.DataFrame()
+        try:
+            df = self.conn.raw_sql(query_dsf)
+            if not df.empty:
+                df['ticker'] = symbol
+                df['company_name'] = permno_df.iloc[0]['comnam']
+                print(f"    ✓ Loaded {len(df)} rows from dsf")
+            else:
+                print(f"    ⚠ dsf query returned 0 rows for date range {start_date} to {end_date}")
+                # Try querying without date restriction to see if data exists
+                try:
+                    test_query = f"""
+                    SELECT COUNT(*) as count, MIN(date) as min_date, MAX(date) as max_date
+                    FROM crsp.dsf
+                    WHERE permno = {permno}
+                    """
+                    test_result = self.conn.raw_sql(test_query)
+                    if not test_result.empty and test_result.iloc[0]['count'] > 0:
+                        min_date = test_result.iloc[0]['min_date']
+                        max_date = test_result.iloc[0]['max_date']
+                        print(f"    ℹ Data exists for {symbol}: {min_date} to {max_date} ({test_result.iloc[0]['count']} total rows)")
+                except:
+                    pass
+        except Exception as e:
+            print(f"    ✗ dsf query failed: {str(e)[:150]}")
+        
+        # If dsf failed or empty, try dse (ETF-specific table)
+        if df.empty:
             try:
-                query_simple = f"""
+                query_dse = f"""
                 SELECT 
                     a.date,
-                    a.ticker,
-                    a.prc as close,
+                    a.bidlo,
+                    a.askhi,
                     a.ret,
                     a.retx,
                     a.shrout as shares_outstanding,
                     a.vol as volume,
                     a.cfacshr,
-                    a.cfacpr,
-                    b.comnam as company_name
-                FROM crsp.dsf as a
-                LEFT JOIN crsp.stocknames as b
-                ON a.permno = b.permno
-                AND b.namedt <= a.date
-                AND a.date <= b.nameendt
-                WHERE a.ticker = '{symbol}'
-                AND a.date BETWEEN '{start_date_sql}' AND '{end_date_sql}'
+                    a.cfacpr
+                FROM crsp.dse as a
+                WHERE a.permno = {permno}
+                AND a.date >= DATE '{start_date_sql}'
+                AND a.date <= DATE '{end_date_sql}'
                 ORDER BY a.date
                 """
-                df = self.conn.raw_sql(query_simple)
+                df_dse = self.conn.raw_sql(query_dse)
+                if not df_dse.empty:
+                    # Calculate close as mid of bid/ask, or use bidlo if askhi is null
+                    if 'bidlo' in df_dse.columns and 'askhi' in df_dse.columns:
+                        df_dse['close'] = (df_dse['bidlo'].fillna(0) + df_dse['askhi'].fillna(0)) / 2
+                        df_dse.loc[df_dse['close'] == 0, 'close'] = df_dse.loc[df_dse['close'] == 0, 'bidlo']
+                    elif 'bidlo' in df_dse.columns:
+                        df_dse['close'] = df_dse['bidlo']
+                    elif 'askhi' in df_dse.columns:
+                        df_dse['close'] = df_dse['askhi']
+                    
+                    df_dse['ticker'] = symbol
+                    df_dse['company_name'] = permno_df.iloc[0]['comnam']
+                    df = df_dse
+                    print(f"    ✓ Loaded {len(df)} rows from dse")
+                else:
+                    print(f"    ⚠ dse query also returned 0 rows")
             except Exception as e2:
-                warnings.warn(f"Failed to load {symbol} from WRDS: {e2}")
-                return pd.DataFrame()
+                print(f"    ✗ dse query failed: {str(e2)[:150]}")
         
         if df.empty:
-            warnings.warn(f"No data found for {symbol} in date range")
             return pd.DataFrame()
         
         # Process dates
@@ -190,7 +228,7 @@ class WRDSETFLoader(ETFDataLoader):
         df['log_returns'] = df['log_price'].diff()
         
         # Compute flow proxy
-        from .utils import compute_flow_proxy, compute_flow_pct_aum, compute_adv
+        from utils import compute_flow_proxy, compute_flow_pct_aum, compute_adv
         df['flow'] = compute_flow_proxy(df['shares_outstanding'], df['price'])
         df['flow_pct'] = compute_flow_pct_aum(df['shares_outstanding'], df['price'])
         df['adv'] = compute_adv(df['volume'], df['price'], window=20)
