@@ -156,7 +156,10 @@ def optimize_hedge_ratios(
     pair_data: pd.DataFrame,
     kalman_config: Dict,
     objective: str = 'sharpe',
-    param_bounds: Optional[Dict] = None) -> Dict:
+    param_bounds: Optional[Dict] = None,
+    method: str = 'fast',
+    use_subset: bool = True,
+    subset_size: int = 1000) -> Dict:
     """
     Optimize Kalman filter parameters (hedge ratio estimation) for a pair.
     
@@ -173,6 +176,12 @@ def optimize_hedge_ratios(
             - observation_noise: (min, max)
             - state_noise: (min, max)
             - initial_beta: (min, max)
+    method : str
+        Optimization method: 'fast' (grid search + local), 'full' (differential evolution)
+    use_subset : bool
+        Use subset of data for faster optimization (default: True)
+    subset_size : int
+        Number of recent observations to use if use_subset=True (default: 1000)
     
     Returns:
     --------
@@ -189,9 +198,15 @@ def optimize_hedge_ratios(
             'initial_beta': (0.5, 1.5)
         }
     
+    # Use subset of data for faster optimization
+    if use_subset and len(pair_data) > subset_size:
+        opt_data = pair_data.iloc[-subset_size:].copy()
+    else:
+        opt_data = pair_data
+    
     # Extract data
-    log_price_a = pair_data['log_price_A']
-    log_price_b = pair_data['log_price_B']
+    log_price_a = opt_data['log_price_A']
+    log_price_b = opt_data['log_price_B']
     
     def objective_func(params):
         obs_noise, state_noise, init_beta = params
@@ -204,15 +219,15 @@ def optimize_hedge_ratios(
         
         try:
             # Run Kalman filter
-            kalman_result = estimate_hedge_ratio_kalman(pair_data, test_config)
+            kalman_result = estimate_hedge_ratio_kalman(opt_data, test_config)
             spread = kalman_result['spread']
             
             # Generate signals
-            signals = generate_signals(pair_data, spread, config.SIGNAL_CONFIG)
-            signals = compute_position_sizes(signals, pair_data, config.BACKTEST_CONFIG)
+            signals = generate_signals(opt_data, spread, config.SIGNAL_CONFIG)
+            signals = compute_position_sizes(signals, opt_data, config.BACKTEST_CONFIG)
             
             # Compute returns
-            strategy_returns = _compute_strategy_returns_simple(signals, pair_data)
+            strategy_returns = _compute_strategy_returns_simple(signals, opt_data)
             
             if len(strategy_returns) == 0:
                 return np.inf
@@ -243,14 +258,46 @@ def optimize_hedge_ratios(
         param_bounds['initial_beta']
     ]
     
-    # Optimize
-    result = differential_evolution(
-        objective_func,
-        bounds=bounds,
-        seed=42,
-        maxiter=100,
-        popsize=15
-    )
+    # Fast method: coarse grid search + local optimization
+    if method == 'fast':
+        # Coarse grid search to find good starting point
+        obs_noise_grid = np.linspace(bounds[0][0], bounds[0][1], 5)
+        state_noise_grid = np.linspace(bounds[1][0], bounds[1][1], 5)
+        init_beta_grid = np.linspace(bounds[2][0], bounds[2][1], 5)
+        
+        best_score = np.inf
+        best_params = None
+        
+        # Quick grid search (only 5*5*5 = 125 evaluations)
+        for obs_n in obs_noise_grid:
+            for state_n in state_noise_grid:
+                for beta in init_beta_grid:
+                    score = objective_func([obs_n, state_n, beta])
+                    if score < best_score:
+                        best_score = score
+                        best_params = [obs_n, state_n, beta]
+        
+        # Local optimization from best grid point
+        from scipy.optimize import minimize as scipy_minimize
+        result = scipy_minimize(
+            objective_func,
+            x0=best_params,
+            method='L-BFGS-B',
+            bounds=bounds,
+            options={'maxiter': 20, 'maxfun': 50}
+        )
+    
+    # Full method: differential evolution (slower but more thorough)
+    else:
+        result = differential_evolution(
+            objective_func,
+            bounds=bounds,
+            seed=42,
+            maxiter=30,  # Reduced from 100
+            popsize=10,  # Reduced from 15
+            atol=1e-4,   # Early stopping tolerance
+            polish=True  # Polish result with local optimizer
+        )
     
     # Get optimal config
     optimal_config = kalman_config.copy()
@@ -258,7 +305,7 @@ def optimize_hedge_ratios(
     optimal_config['state_noise'] = result.x[1]
     optimal_config['initial_beta'] = result.x[2]
     
-    # Re-run with optimal config to get final results
+    # Re-run with optimal config on FULL dataset to get final results
     kalman_result = estimate_hedge_ratio_kalman(pair_data, optimal_config)
     spread = kalman_result['spread']
     
@@ -275,7 +322,8 @@ def optimize_hedge_ratios(
         'signals': signals,
         'strategy_returns': strategy_returns,
         'metrics': metrics,
-        'optimization_result': result
+        'optimization_result': result,
+        'method_used': method
     }
 
 
