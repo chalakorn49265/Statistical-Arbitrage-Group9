@@ -11,6 +11,7 @@ from datetime import datetime
 # ============================================================================
 
 # Define ETF pairs: (ETF_A, ETF_B, sector_name)
+# Original 5 pairs (for backward compatibility)
 ETF_PAIRS = [
     ('XLE', 'VDE', 'Energy'),
     ('XLK', 'FTEC', 'Technology'),
@@ -18,6 +19,10 @@ ETF_PAIRS = [
     ('XLI', 'VIS', 'Industrials'),
     ('XLV', 'VHT', 'Healthcare'),
 ]
+
+# Expanded candidate pairs (20-50 pairs for correlation analysis and selection)
+# Import from pair_selection module for full list
+# Use EXPANDED_ETF_PAIRS from src.pair_selection for comprehensive analysis
 
 # Alternative: specify pairs as dictionary with metadata
 # ETF_PAIRS_DICT = {

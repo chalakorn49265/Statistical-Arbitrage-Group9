@@ -159,7 +159,9 @@ def optimize_hedge_ratios(
     param_bounds: Optional[Dict] = None,
     method: str = 'fast',
     use_subset: bool = True,
-    subset_size: int = 1000) -> Dict:
+    subset_size: int = 1000,
+    transaction_cost_bps: float = 0.0,
+    spread_cost_bps: float = 0.0) -> Dict:
     """
     Optimize Kalman filter parameters (hedge ratio estimation) for a pair.
     
@@ -182,6 +184,10 @@ def optimize_hedge_ratios(
         Use subset of data for faster optimization (default: True)
     subset_size : int
         Number of recent observations to use if use_subset=True (default: 1000)
+    transaction_cost_bps : float
+        Transaction cost in basis points (default: 0.0)
+    spread_cost_bps : float
+        Spread cost in basis points per side (default: 0.0)
     
     Returns:
     --------
@@ -226,8 +232,13 @@ def optimize_hedge_ratios(
             signals = generate_signals(opt_data, spread, config.SIGNAL_CONFIG)
             signals = compute_position_sizes(signals, opt_data, config.BACKTEST_CONFIG)
             
-            # Compute returns
-            strategy_returns = _compute_strategy_returns_simple(signals, opt_data)
+            # Compute returns (with or without transaction costs)
+            if transaction_cost_bps > 0 or spread_cost_bps > 0:
+                strategy_returns = _compute_strategy_returns_with_costs(
+                    signals, opt_data, transaction_cost_bps, spread_cost_bps
+                )
+            else:
+                strategy_returns = _compute_strategy_returns_simple(signals, opt_data)
             
             if len(strategy_returns) == 0:
                 return np.inf
@@ -311,7 +322,14 @@ def optimize_hedge_ratios(
     
     signals = generate_signals(pair_data, spread, config.SIGNAL_CONFIG)
     signals = compute_position_sizes(signals, pair_data, config.BACKTEST_CONFIG)
-    strategy_returns = _compute_strategy_returns_simple(signals, pair_data)
+    
+    # Compute returns (with or without transaction costs)
+    if transaction_cost_bps > 0 or spread_cost_bps > 0:
+        strategy_returns = _compute_strategy_returns_with_costs(
+            signals, pair_data, transaction_cost_bps, spread_cost_bps
+        )
+    else:
+        strategy_returns = _compute_strategy_returns_simple(signals, pair_data)
     
     metrics = _compute_portfolio_metrics(strategy_returns)
     
@@ -342,6 +360,69 @@ def _compute_strategy_returns_simple(signals: pd.DataFrame, pair_data: pd.DataFr
     prev_notional = notional.shift(1).fillna(notional)
     strategy_returns = dollar_pnl / prev_notional.replace(0, np.nan)
     strategy_returns = strategy_returns.fillna(0.0)
+    
+    return strategy_returns
+
+
+def _compute_strategy_returns_with_costs(
+    signals: pd.DataFrame, 
+    pair_data: pd.DataFrame,
+    transaction_cost_bps: float,
+    spread_cost_bps: float
+) -> pd.Series:
+    """Compute strategy returns with transaction costs."""
+    # Convert bps to decimal
+    transaction_cost = transaction_cost_bps / 10000
+    spread_cost = spread_cost_bps / 10000
+    
+    # Align data on common dates
+    common_idx = signals.index.intersection(pair_data.index)
+    
+    # Get position sizes and returns
+    pos_a = signals.loc[common_idx, 'position_size_A']
+    pos_b = signals.loc[common_idx, 'position_size_B']
+    returns_a = pair_data.loc[common_idx, 'returns_A']
+    returns_b = pair_data.loc[common_idx, 'returns_B']
+    
+    # Compute strategy returns with transaction costs
+    strategy_returns = pd.Series(index=common_idx, data=0.0)
+    
+    prev_pos_a = 0.0
+    prev_pos_b = 0.0
+    
+    for i, date in enumerate(common_idx):
+        curr_pos_a = pos_a.loc[date] if not pd.isna(pos_a.loc[date]) else 0.0
+        curr_pos_b = pos_b.loc[date] if not pd.isna(pos_b.loc[date]) else 0.0
+        
+        # Position change (turnover)
+        delta_a = curr_pos_a - prev_pos_a
+        delta_b = curr_pos_b - prev_pos_b
+        
+        # Transaction costs (only on position changes)
+        turnover_a = abs(delta_a)
+        turnover_b = abs(delta_b)
+        total_cost = (turnover_a + turnover_b) * (transaction_cost + spread_cost)
+        
+        # P&L from positions (using previous period's positions)
+        if i > 0:
+            pnl_from_positions = (
+                prev_pos_a * returns_a.loc[date] +
+                prev_pos_b * returns_b.loc[date]
+            )
+        else:
+            pnl_from_positions = 0.0
+        
+        # Net P&L (normalized by notional)
+        notional = abs(curr_pos_a) + abs(curr_pos_b)
+        prev_notional = abs(prev_pos_a) + abs(prev_pos_b) if i > 0 else notional
+        
+        if prev_notional > 0:
+            strategy_returns.loc[date] = (pnl_from_positions - total_cost) / prev_notional
+        else:
+            strategy_returns.loc[date] = 0.0
+        
+        prev_pos_a = curr_pos_a
+        prev_pos_b = curr_pos_b
     
     return strategy_returns
 
