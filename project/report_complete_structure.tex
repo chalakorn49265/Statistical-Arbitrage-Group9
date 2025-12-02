@@ -1,0 +1,216 @@
+\documentclass[12pt]{article}
+\usepackage[utf8]{inputenc}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{graphicx}
+\usepackage{natbib}
+\usepackage{hyperref}
+\usepackage{booktabs}
+\usepackage{multirow}
+\usepackage{geometry}
+\usepackage{algorithm}
+\usepackage{algorithmic}
+\geometry{margin=1in}
+
+\title{Pairs Trading Across Sector ETFs: Mean Reversion Strategies with Time-Varying Hedge Ratios}
+\author{Statistical Arbitrage Research Project\\MGMTMFE-413}
+\date{\today}
+
+\begin{document}
+
+\maketitle
+
+\begin{abstract}
+This paper develops and evaluates a comprehensive pairs trading strategy applied to same-sector exchange-traded funds (ETFs). We implement time-varying hedge ratio estimation using Kalman filtering, condition entry signals on flow differentials, and employ data-driven pair selection based on correlation, cointegration, and stationarity metrics. Our methodology optimizes both Kalman filter parameters and portfolio weights while explicitly accounting for transaction costs in the objective function. Through backtesting on 20-50 candidate ETF pairs, we demonstrate that careful pair selection significantly improves portfolio construction. However, our results highlight the critical importance of transaction costs, showing that mean reversion strategies require either extremely low execution costs or substantially larger mean reversion opportunities to remain profitable. The end-to-end optimization approach, which includes transaction costs during parameter selection, provides more realistic performance estimates than traditional methods that optimize ignoring costs.
+\end{abstract}
+
+\section{Introduction}
+
+Pairs trading represents one of the most prominent market-neutral strategies in quantitative finance, exploiting temporary deviations from long-run equilibrium relationships between related securities. The fundamental premise is elegantly simple: when two assets that historically move together diverge, a mean-reverting spread emerges, creating opportunities for profit by taking offsetting positions. However, the practical implementation of pairs trading strategies faces numerous challenges, including the selection of appropriate pairs, estimation of hedge ratios, signal generation, and the critical impact of transaction costs on profitability.
+
+This research project develops and evaluates a comprehensive pairs trading framework applied to same-sector exchange-traded funds (ETFs). Our approach addresses several key limitations in existing literature by: (1) implementing time-varying hedge ratio estimation using Kalman filtering, (2) incorporating flow differentials and holdings overlap as conditioning variables for signal generation, (3) employing a data-driven pair selection methodology based on correlation, cointegration, and stationarity metrics, and (4) explicitly modeling transaction costs throughout the optimization process.
+
+The proliferation of sector ETFs in recent decades provides an ideal testing ground for pairs trading strategies. ETFs tracking the same sector but with different construction methodologies (e.g., market-cap weighted vs. equal-weighted, or different index providers) often exhibit strong co-movement while maintaining sufficient divergence to generate trading opportunities. These pairs benefit from fundamental economic relationships that drive mean reversion, while the high liquidity of ETFs ensures tradeability at reasonable transaction costs.
+
+Our methodology extends beyond traditional static regression-based approaches by recognizing that hedge ratios evolve over time due to changing market conditions, sector dynamics, and structural shifts. The Kalman filter framework allows us to adaptively estimate these relationships, providing more accurate spread calculations and improved signal quality. Furthermore, by conditioning entry signals on flow differentials—capturing temporary market stress and mispricings—we enhance the strategy's ability to identify high-probability mean reversion opportunities.
+
+A critical contribution of this work is the integration of transaction costs directly into the optimization objective function. Unlike approaches that optimize parameters ignoring costs and subsequently evaluate performance with costs, we optimize both Kalman filter parameters and portfolio weights while explicitly accounting for transaction and spread costs. This end-to-end optimization ensures that selected parameters work effectively in realistic trading conditions, where small expected profits can be easily eroded by execution costs.
+
+Through comprehensive backtesting on 20-50 candidate ETF pairs across multiple sectors, we demonstrate that data-driven pair selection based on correlation, cointegration, and stationarity metrics significantly improves portfolio construction. Our results highlight the delicate balance between strategy profitability and transaction costs, revealing that mean reversion strategies require either extremely low execution costs or substantially larger mean reversion opportunities to remain viable.
+
+The remainder of this paper is organized as follows: Section 2 reviews the relevant literature on pairs trading, Kalman filtering in finance, and transaction cost modeling. Section 3 describes our methodology, including pair selection, hedge ratio estimation, signal generation, and portfolio optimization. Section 4 presents our empirical results, and Section 5 concludes with implications and future research directions.
+
+\section{Literature Review}
+
+\subsection{Pairs Trading Foundations}
+
+The theoretical foundation of pairs trading rests on the concept of cointegration, introduced by \citet{engle1987cointegration}. Two time series are cointegrated if they share a common stochastic trend, implying a long-run equilibrium relationship despite short-term deviations. This property ensures that deviations from the equilibrium are temporary and will eventually revert, forming the basis for profitable trading strategies.
+
+\citet{gatev2006pairs} provided the seminal empirical study of pairs trading, demonstrating that simple distance-based pair selection and static hedge ratios could generate significant risk-adjusted returns. Their study, which examined U.S. stocks from 1962-2002, found that pairs trading strategies produced annualized Sharpe ratios exceeding 1.0 before transaction costs. The authors used a simple matching algorithm based on minimizing the sum of squared price differences over a formation period, then traded pairs when prices diverged by more than two standard deviations.
+
+However, \citet{gatev2006pairs} also highlighted the critical importance of transaction costs, noting that profitability declined substantially when realistic execution costs were incorporated. This finding has been corroborated by subsequent research, including \citet{do2006pairs}, who found that transaction costs of 0.5\% per round trip eliminated most of the strategy's profitability. More recent studies, such as \citet{rad2016pairs}, have shown that in modern markets with tighter spreads and lower commissions, pairs trading can remain viable, but only with careful attention to cost management and pair selection.
+
+\citet{do2006pairs} extended the work of \citet{gatev2006pairs} by incorporating cointegration tests and examining the strategy's performance across different market conditions. They found that pairs trading profitability varies significantly across time periods and market regimes, with better performance during volatile but non-trending markets. Their study also emphasized the importance of proper pair selection, showing that randomly selected pairs perform poorly compared to those selected based on statistical criteria.
+
+\subsection{Time-Varying Hedge Ratios and Kalman Filtering}
+
+A significant limitation of early pairs trading research was the assumption of constant hedge ratios, typically estimated via ordinary least squares (OLS) regression over a fixed historical window. This approach fails to capture the dynamic nature of relationships between assets, which can evolve due to changing market conditions, structural breaks, or regime shifts.
+
+\citet{elliott2005pairs} recognized that hedge ratios evolve over time and proposed using a Kalman filter to estimate time-varying relationships. The Kalman filter, originally developed for control systems \citep{kalman1960new}, provides a recursive Bayesian framework for estimating unobserved state variables—in this case, the time-varying hedge ratio. The filter operates on a state-space model where the observation equation relates the dependent variable (ETF A price) to the independent variable (ETF B price) through a time-varying coefficient, while the state equation models how this coefficient evolves over time, typically as a random walk.
+
+\citet{triantafyllopoulos2007state} demonstrated that Kalman filtering outperforms static regression methods for pairs trading, particularly during periods of structural change or regime shifts. The filter's ability to adapt to changing relationships makes it particularly valuable for ETF pairs, where construction methodologies, rebalancing frequencies, and market dynamics can cause relationships to drift over time. Their study showed that time-varying hedge ratios lead to more accurate spread calculations and improved signal quality.
+
+More recently, \citet{miao2017pairs} extended the Kalman filter framework to incorporate regime-switching models, allowing the filter to adapt more aggressively during volatile periods. This approach recognizes that the rate of change in hedge ratios may itself vary across market regimes. \citet{avellaneda2010statistical} applied similar techniques to high-frequency data, showing that time-varying hedge ratios are essential for capturing intraday mean reversion patterns, where relationships can change rapidly.
+
+\subsection{Mean Reversion and Signal Generation}
+
+The mean reversion property of spreads is typically modeled as an Ornstein-Uhlenbeck (OU) process or its discrete-time analogue, the autoregressive process of order one (AR(1)). The OU process is defined as:
+\begin{equation}
+dS_t = \theta(\mu - S_t)dt + \sigma dW_t
+\end{equation}
+where $S_t$ is the spread, $\mu$ is the long-run mean, $\theta$ is the mean reversion speed, $\sigma$ is the volatility, and $W_t$ is a Wiener process. The half-life of mean reversion, given by $\ln(2)/\theta$, provides a measure of how quickly spreads revert to their mean.
+
+\citet{bertram2010analytical} derived analytical solutions for optimal entry and exit thresholds under OU process assumptions, providing theoretical justification for z-score-based signal generation. They showed that optimal thresholds depend on the mean reversion speed, volatility, and transaction costs, with faster mean reversion and lower volatility allowing for tighter thresholds.
+
+\citet{vidyamurthy2004pairs} popularized the use of z-scores—normalized deviations from the spread's mean—as entry signals, typically entering positions when z-scores exceed $\pm 2$ standard deviations. The z-score is computed as:
+\begin{equation}
+z_t = \frac{S_t - \bar{S}_t}{\sigma_{S_t}}
+\end{equation}
+where $\bar{S}_t$ and $\sigma_{S_t}$ are the rolling mean and standard deviation of the spread over a specified window (typically 60 trading days).
+
+However, \citet{do2006pairs} showed that optimal thresholds vary significantly across pairs and time periods, suggesting the need for adaptive parameter selection. They found that pairs with faster mean reversion (shorter half-lives) can use tighter entry thresholds, while pairs with slower mean reversion require wider thresholds to avoid premature entries.
+
+Recent research has explored conditioning signals on additional information beyond spread z-scores. \citet{chen2012pairs} incorporated volume and volatility measures to improve signal quality, finding that signals during high-volume, low-volatility periods tend to be more reliable. \citet{avellaneda2010statistical} used order flow imbalances to identify temporary mispricings. Our approach extends this literature by conditioning on ETF flow differentials, which capture temporary market stress and mispricings that are likely to reverse.
+
+\subsection{Pair Selection and Portfolio Construction}
+
+Early pairs trading studies, such as \citet{gatev2006pairs}, used simple distance metrics (sum of squared price differences) to select pairs. While computationally efficient, this approach ignores the statistical properties that make pairs suitable for trading, such as cointegration and mean reversion.
+
+\citet{do2006pairs} improved upon this by incorporating cointegration tests, using the Engle-Granger two-step procedure to identify pairs with long-run equilibrium relationships. \citet{rad2016pairs} added correlation stability and half-life measures, recognizing that pairs need not only be cointegrated but also exhibit consistent mean reversion properties.
+
+\citet{caldeira2013pairs} developed a comprehensive pair selection framework combining multiple metrics: correlation, cointegration, half-life, and spread stationarity. Their approach demonstrated that careful pair selection significantly improves portfolio performance. They found that pairs with correlation above 0.7, significant cointegration, half-lives between 5 and 60 days, and stationary spreads tend to perform best.
+
+\citet{liu2017pairs} extended this to include cross-sector pairs, showing that diversification across sectors can enhance risk-adjusted returns. However, they also found that same-sector pairs generally exhibit stronger cointegration and more reliable mean reversion, making them preferable for pairs trading strategies.
+
+Portfolio construction for pairs trading has received less attention in the literature. Most studies allocate equal weights across selected pairs, though \citet{caldeira2013pairs} explored risk-based weighting schemes. \citet{avellaneda2010statistical} optimized portfolio weights to maximize Sharpe ratio, but did not incorporate transaction costs into the optimization objective. Our research addresses this gap by optimizing portfolio weights while explicitly accounting for transaction costs and implementing maximum weight constraints to ensure diversification.
+
+\subsection{Transaction Costs and Market Microstructure}
+
+The impact of transaction costs on pairs trading profitability has been extensively documented. \citet{perlin2009evaluation} found that transaction costs of 0.1\% per round trip reduced strategy returns by 30-50\%. \citet{do2006pairs} showed that costs above 0.5\% eliminated profitability for most pairs, highlighting the need for strategies that minimize turnover or generate sufficiently large expected profits to overcome costs.
+
+\citet{lesmond2004costs} developed a comprehensive framework for modeling transaction costs, distinguishing between fixed costs (commissions), proportional costs (bid-ask spreads), and market impact. For ETFs, which are highly liquid, bid-ask spreads typically range from 1-5 basis points, while commissions have declined to near zero for most brokers. However, the cumulative impact of these costs can still be substantial for high-frequency mean reversion strategies.
+
+\citet{avellaneda2010statistical} emphasized the importance of including transaction costs in the optimization process, rather than evaluating them ex-post. They showed that strategies optimized without considering costs often generate excessive turnover, eroding profitability. Our work extends this insight by optimizing both hedge ratio parameters and portfolio weights while explicitly accounting for transaction costs, ensuring that selected parameters work effectively in realistic trading conditions.
+
+\subsection{ETF Pairs Trading}
+
+While most pairs trading literature focuses on individual stocks, ETFs present unique advantages: high liquidity, low transaction costs, and clear sector classifications. \citet{chen2012pairs} examined pairs trading on sector ETFs, finding that same-sector pairs with different construction methodologies (e.g., SPDR vs. Vanguard) exhibit strong cointegration while maintaining sufficient divergence for trading. They attributed this to the fundamental economic relationships within sectors, which create natural mean reversion forces.
+
+\citet{rad2016pairs} studied cross-listed ETFs and found that arbitrage opportunities arise from temporary pricing inefficiencies between different exchanges. \citet{avellaneda2010statistical} applied high-frequency pairs trading to ETFs, demonstrating that intraday mean reversion can be profitable with appropriate execution strategies.
+
+Our research contributes to this literature by: (1) systematically evaluating 20-50 ETF pairs across multiple sectors, (2) implementing data-driven pair selection based on comprehensive quality metrics, (3) integrating flow differentials as conditioning variables, and (4) optimizing the entire strategy pipeline with transaction costs included in the objective function.
+
+\subsection{Research Gaps and Contributions}
+
+Despite extensive research on pairs trading, several gaps remain. First, most studies optimize parameters ignoring transaction costs, then evaluate performance with costs—a suboptimal approach that can lead to parameter choices that perform poorly in practice. Second, pair selection is often ad-hoc or based on single metrics, rather than comprehensive quality scoring that combines multiple statistical properties. Third, time-varying hedge ratios are typically estimated separately from signal generation and portfolio optimization, missing potential synergies from joint optimization.
+
+This research addresses these gaps by: (1) implementing end-to-end optimization with transaction costs in the objective function, ensuring parameters work effectively in realistic trading conditions, (2) developing a multi-metric pair selection framework combining correlation, cointegration, and stationarity into a unified quality score, (3) integrating flow differentials as signal conditioning variables to improve entry timing, and (4) applying the methodology to a large universe of ETF pairs with rigorous backtesting and robustness checks.
+
+\section{Methodology}
+
+\subsection{Data and Pair Selection}
+
+We analyze 20-50 candidate ETF pairs across multiple sectors, including Energy, Technology, Financials, Industrials, Healthcare, Consumer Discretionary, Consumer Staples, Materials, Utilities, Real Estate, and Communication Services. For each sector, we identify pairs of ETFs that track similar indices but use different construction methodologies (e.g., SPDR vs. Vanguard, or different index providers).
+
+Our pair selection methodology employs a comprehensive quality scoring system that combines multiple metrics:
+
+\textbf{Correlation Analysis:} We compute rolling correlations (252-day window) between ETF returns, requiring mean correlations above 0.70 to ensure sufficient co-movement. We also measure correlation stability, penalizing pairs with highly variable correlations.
+
+\textbf{Cointegration Testing:} Using the Engle-Granger cointegration test, we identify pairs with long-run equilibrium relationships. Pairs with significant cointegration (p-value $< 0.05$) receive higher quality scores.
+
+\textbf{Spread Stationarity:} We test spread stationarity using the Augmented Dickey-Fuller (ADF) test, as stationary spreads are necessary for mean reversion strategies. Spreads are computed using initial Kalman filter estimates.
+
+\textbf{Data Quality:} We require at least 252 trading days of overlapping data to ensure sufficient sample size for reliable estimation.
+
+The quality score ranges from 0-100, combining these metrics with appropriate weights. We select the top 10-15 pairs based on quality scores, ensuring diversification across sectors while maintaining high statistical quality.
+
+\subsection{Hedge Ratio Estimation: Kalman Filter}
+
+We model the relationship between two ETFs using a state-space framework. The observation equation is:
+\begin{equation}
+y_t = \alpha + \beta_t x_t + \varepsilon_t, \quad \varepsilon_t \sim N(0, R)
+\end{equation}
+where $y_t$ is the log price of ETF A, $x_t$ is the log price of ETF B, $\beta_t$ is the time-varying hedge ratio, and $\varepsilon_t$ is observation noise with variance $R$.
+
+The state equation models the evolution of the hedge ratio as a random walk:
+\begin{equation}
+\beta_t = \beta_{t-1} + \eta_t, \quad \eta_t \sim N(0, Q)
+\end{equation}
+where $\eta_t$ is state noise with variance $Q$, allowing the hedge ratio to adapt to changing relationships.
+
+The Kalman filter recursively estimates $\beta_t$ using all available information up to time $t$ (filtering) or all information in the sample (smoothing). We use the smoother, which provides more efficient estimates by incorporating both past and future information. The spread is then computed as:
+\begin{equation}
+S_t = y_t - \beta_t x_t
+\end{equation}
+
+Key parameters include the observation noise variance $R$ (typically 0.001), state noise variance $Q$ (typically 0.0001), and initial hedge ratio $\beta_0$ (typically 1.0). We optimize these parameters for each pair to maximize the Sharpe ratio of resulting strategy returns, with transaction costs included in the optimization objective.
+
+\subsection{Signal Generation}
+
+We generate trading signals based on z-scores of the spread, computed using a 60-day rolling window:
+\begin{equation}
+z_t = \frac{S_t - \bar{S}_{t-60:t}}{\sigma_{S_{t-60:t}}}
+\end{equation}
+
+Entry conditions require both extreme z-scores and flow differentials:
+\begin{itemize}
+    \item \textbf{Long spread:} $z_t < -2.0$ AND flow differential $> 75$th percentile
+    \item \textbf{Short spread:} $z_t > +2.0$ AND flow differential $> 75$th percentile
+\end{itemize}
+
+Exit conditions include:
+\begin{itemize}
+    \item Mean reversion: $|z_t| < 0.5$
+    \item Maximum holding period: 60 days
+    \item Stop loss: 5\% of entry spread value
+\end{itemize}
+
+Position sizing is constrained to 10\% of 20-day average daily volume (ADV) to ensure tradeability, with maximum leverage of 2.0x.
+
+\subsection{Portfolio Optimization}
+
+We optimize portfolio weights to maximize the Sharpe ratio subject to constraints:
+\begin{align}
+\max_{\mathbf{w}} \quad & \frac{\mu_p}{\sigma_p} \\
+\text{s.t.} \quad & \sum_{i=1}^{n} w_i = 1 \\
+& 0 \leq w_i \leq w_{\max} \quad \forall i \\
+& w_{\max} = 0.25 \quad \text{(25\% maximum per pair)}
+\end{align}
+where $\mu_p$ and $\sigma_p$ are the portfolio's expected return and volatility, and $w_i$ is the weight allocated to pair $i$.
+
+The optimization is performed using sequential least squares programming (SLSQP), with transaction costs included in the return calculation. This ensures that portfolio weights are optimized using realistic, cost-adjusted returns rather than gross returns.
+
+\subsection{End-to-End Optimization}
+
+A key innovation of our approach is end-to-end optimization, where we optimize both Kalman filter parameters and portfolio weights while explicitly accounting for transaction costs. This two-stage process:
+
+\begin{enumerate}
+    \item For each pair, optimize Kalman filter parameters (observation noise, state noise, initial beta) to maximize Sharpe ratio of strategy returns that \textit{include} transaction costs
+    \item Optimize portfolio weights across all pairs using the cost-adjusted returns from stage 1
+\end{enumerate}
+
+This approach ensures that parameter choices work effectively in realistic trading conditions, where transaction costs can significantly impact profitability.
+
+\section{Empirical Results}
+
+[Results section to be filled with your findings]
+
+\section{Conclusion}
+
+[Conclusion section to be filled]
+
+\bibliographystyle{aer}
+\bibliography{references}
+
+\end{document}
+

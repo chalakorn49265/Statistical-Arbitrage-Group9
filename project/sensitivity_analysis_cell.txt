@@ -1,0 +1,160 @@
+# Sensitivity Analysis: Transaction Cost Levels
+print("="*70)
+print("Sensitivity Analysis: Transaction Cost Levels")
+print("="*70)
+
+# Define transaction cost levels to test (in basis points)
+cost_levels = [0, 10, 20, 50]
+
+# Store results for each cost level
+sensitivity_results = []
+
+# Check if we have pair data
+if 'pair_data_dict' not in locals():
+    print("\nError: pair_data_dict not found. Using pair_returns_dict if available...")
+    if 'pair_returns_dict' not in locals():
+        print("Error: No pair data available. Please run previous cells first.")
+    else:
+        print("Using pair_returns_dict (gross returns)")
+        use_gross_returns = True
+        pairs_to_use = pair_returns_dict
+else:
+    print("Using pair_data_dict (will compute returns with costs)")
+    use_gross_returns = False
+    pairs_to_use = pair_data_dict
+
+if 'pairs_to_use' in locals():
+    print(f"\nAnalyzing {len(pairs_to_use)} pairs across {len(cost_levels)} cost levels...\n")
+    
+    for cost_bps in cost_levels:
+        print(f"Processing {cost_bps} bps...", end=" ")
+        
+        try:
+            if use_gross_returns:
+                # Apply costs to gross returns (simplified approach)
+                # For accurate costs, we'd need to recompute with actual trades
+                cost_adjusted_returns = {}
+                for pair_name, gross_returns in pairs_to_use.items():
+                    if cost_bps > 0:
+                        # Estimate costs based on return volatility and frequency
+                        # This is an approximation
+                        cost_per_trade = cost_bps / 10000  # Convert to decimal
+                        # Rough estimate: assume trading frequency proportional to volatility
+                        estimated_trades_per_year = gross_returns.abs().sum() * 252 / len(gross_returns)
+                        annual_cost = cost_per_trade * estimated_trades_per_year
+                        daily_cost = annual_cost / 252
+                        net_returns = gross_returns - daily_cost
+                        cost_adjusted_returns[pair_name] = net_returns
+                    else:
+                        cost_adjusted_returns[pair_name] = gross_returns
+            else:
+                # Recompute returns with actual costs for each pair
+                from src.kalman_filter import estimate_hedge_ratio_kalman
+                from src.signal_generation import generate_signals, compute_position_sizes
+                from src.portfolio_optimization import _compute_strategy_returns_with_costs, _compute_strategy_returns_simple
+                import config
+                
+                cost_adjusted_returns = {}
+                for pair_name, pair_df in pairs_to_use.items():
+                    try:
+                        # Run Kalman filter
+                        kalman_result = estimate_hedge_ratio_kalman(pair_df, config.KALMAN_CONFIG)
+                        spread = kalman_result['spread']
+                        
+                        # Generate signals
+                        signals = generate_signals(pair_df, spread, config.SIGNAL_CONFIG)
+                        signals = compute_position_sizes(signals, pair_df, config.BACKTEST_CONFIG)
+                        
+                        # Compute returns with costs
+                        if cost_bps > 0:
+                            trans_cost = cost_bps / 2  # Half for each side
+                            spread_cost = 5  # Fixed spread cost
+                            strategy_returns = _compute_strategy_returns_with_costs(
+                                signals, pair_df, trans_cost, spread_cost
+                            )
+                        else:
+                            strategy_returns = _compute_strategy_returns_simple(signals, pair_df)
+                        
+                        cost_adjusted_returns[pair_name] = strategy_returns
+                    except Exception as e:
+                        print(f"\n  Error with {pair_name}: {e}")
+                        continue
+            
+            if len(cost_adjusted_returns) == 0:
+                print("No valid returns. Skipping.")
+                continue
+            
+            # Optimize portfolio weights
+            opt_result = optimize_portfolio_weights(
+                cost_adjusted_returns,
+                objective='sharpe',
+                constraints=weight_constraints,
+                method='SLSQP'
+            )
+            
+            portfolio_returns = opt_result['portfolio_returns']
+            portfolio_metrics = opt_result['metrics']
+            
+            # Estimate turnover (simplified)
+            # For accurate turnover, track actual position changes
+            if len(portfolio_returns) > 0:
+                # Rough estimate: turnover ~ 2 * volatility (annualized)
+                turnover_estimate = portfolio_returns.std() * np.sqrt(252) * 2
+            else:
+                turnover_estimate = 0
+            
+            # Store results
+            sensitivity_results.append({
+                'Cost Level': f"{cost_bps} bps",
+                'Ann. Return': portfolio_metrics.get('annualized_return', 0) * 100,
+                'Sharpe': portfolio_metrics.get('sharpe_ratio', 0),
+                'Max DD': portfolio_metrics.get('max_drawdown', 0) * 100,
+                'Turnover': turnover_estimate
+            })
+            
+            print(f"Done. Return: {portfolio_metrics.get('annualized_return', 0)*100:.2f}%, Sharpe: {portfolio_metrics.get('sharpe_ratio', 0):.2f}")
+            
+        except Exception as e:
+            print(f"Error: {e}")
+            import traceback
+            traceback.print_exc()
+            continue
+    
+    # Display results table
+    if len(sensitivity_results) > 0:
+        print("\n" + "="*70)
+        print("Table 2: Sensitivity Analysis: Transaction Cost Levels")
+        print("="*70)
+        
+        sensitivity_df = pd.DataFrame(sensitivity_results)
+        
+        # Display formatted table
+        print("\n")
+        print(sensitivity_df.to_string(index=False))
+        
+        # Print LaTeX format
+        print("\n" + "="*70)
+        print("LaTeX Table Code:")
+        print("="*70)
+        print("\\begin{table}[h]")
+        print("\\centering")
+        print("\\caption{Sensitivity Analysis: Transaction Cost Levels}")
+        print("\\label{tab:cost_sensitivity}")
+        print("\\begin{tabular}{lcccc}")
+        print("\\toprule")
+        print("\\textbf{Cost Level} & \\textbf{Ann. Return} & \\textbf{Sharpe} & \\textbf{Max DD} & \\textbf{Turnover} \\\\")
+        print("\\midrule")
+        
+        for _, row in sensitivity_df.iterrows():
+            print(f"{row['Cost Level']} & {row['Ann. Return']:.2f}\\% & {row['Sharpe']:.2f} & {row['Max DD']:.2f}\\% & {row['Turnover']:.2f} \\\\")
+        
+        print("\\bottomrule")
+        print("\\end{tabular}")
+        print("\\end{table}")
+        
+        # Store for later
+        sensitivity_analysis_df = sensitivity_df
+        
+    else:
+        print("\nNo results generated.")
+
